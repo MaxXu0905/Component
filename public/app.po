@@ -1,0 +1,2089 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-26 16:32+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=GBK\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid "ERROR: source class must be derived from sa_isocket"
+msgstr "错误：源类必须派生自sa_isocket"
+
+msgid "WARN: Can't send message to socket, {1}"
+msgstr "警告：不能发送消息到socket，{1}"
+
+msgid "ERROR: unsupported flags {1}"
+msgstr "错误：不支持的标志 {1}"
+
+msgid "input_idx={1}"
+msgstr "input_idx={1}"
+
+msgid "ERROR: failed to insert record into table {1}"
+msgstr "错误：插入记录到表 {1} 失败"
+
+msgid "ERROR: failed to parse statement {1}"
+msgstr "错误：解析语句 {1} 失败"
+
+msgid "ERROR: Can't truncate table on sqlite"
+msgstr "错误：不能在sqlite上truncate表"
+
+msgid "ERROR: Can't insert process on sqlite"
+msgstr "错误：不能在sqlite上插入进程"
+
+msgid "ERROR: Can't erase process on sqlite"
+msgstr "错误：不能在sqlite上清除进程"
+
+msgid "ERROR: Can't update entry on sqlite"
+msgstr "错误：不能在sqlite上更新实体"
+
+msgid "ERROR: Can't reset insert statement, {1}"
+msgstr "错误：不能重置插入语句，{1}"
+
+msgid "ERROR: Can't bind insert statement, {1}"
+msgstr "错误：不能绑定插入语句，{1}"
+
+msgid "ERROR: Can't step insert statement, {1}"
+msgstr "错误：不能执行插入语句，{1}"
+
+msgid "ERROR: Can't reset update statement, {1}"
+msgstr "错误：不能重置更新语句，{1}"
+
+msgid "ERROR: Can't bind update statement, {1}"
+msgstr "错误：不能绑定更新语句，{1}"
+
+msgid "ERROR: Can't step update statement, {1}"
+msgstr "错误：不能执行更新语句，{1}"
+
+msgid "pid={1}"
+msgstr "pid={1}"
+
+msgid "ERROR: Can't reset delete statement, {1}"
+msgstr "错误：不能重置删除语句，{1}"
+
+msgid "ERROR: Can't bind delete statement, {1}"
+msgstr "错误：不能绑定删除语句，{1}"
+
+msgid "ERROR: Can't step delete statement, {1}"
+msgstr "错误：不能执行删除语句，{1}"
+
+msgid "ERROR: Can't truncate table, {1}"
+msgstr "错误：不能truncate表，{1}"
+
+msgid ""
+"ERROR: SA(sa_id={1}, com_key={2}, svc_key={3})'s input array size doesn't "
+"match SA(sa_id={4}, com_key={5}, svc_key={6})'s input array size"
+msgstr ""
+"错误：服务适配器(sa_id={1}, com_key={2}, svc_key={3})的输入队列大小与服务适配"
+"器(sa_id={4}, com_key={5}, svc_key={6})的输入队列大小不一致"
+
+msgid ""
+"ERROR: SA(sa_id={1}, com_key={2}, svc_key={3})'s output array size doesn't "
+"match SA(sa_id={4}, com_key={5}, svc_key={6})'s input array size"
+msgstr ""
+"错误：服务适配器(sa_id={1}, com_key={2}, svc_key={3})的输出队列大小与服务适配"
+"器(sa_id={4}, com_key={5}, svc_key={6})的输入队列大小不一致"
+
+msgid "ERROR: Failed to update database log"
+msgstr "错误：更新数据库日志失败"
+
+msgid "ERROR: no data found in result set"
+msgstr "错误：在结果集中没有发现数据"
+
+msgid "idx={1}"
+msgstr "idx={1}"
+
+msgid "ERROR: unknown field orign {1} for field_serial {2}"
+msgstr "错误：对字段序列 {2} 未知的字段来源 {1}"
+
+msgid "ERROR: directory missing in args.arg"
+msgstr "错误：在args.arg中缺少directory"
+
+msgid "ERROR: rdirectory invalid in args.arg"
+msgstr "错误：在args.arg中rdirectory配置无效"
+
+msgid "ERROR: Can't open file {1} - {2}"
+msgstr "错误：不能打开文件 {1} - {2}"
+
+msgid "ERROR: Can't remove file {1} - {2}"
+msgstr "错误：不能删除文件  {1} - {2}"
+
+msgid "ERROR: Can't rename file {1} to {2} - {3}"
+msgstr "错误：不能重命名文件 {1} to {2} - {3}"
+
+msgid "ERROR: APPROOT environment not set"
+msgstr "错误：APPROOT环境变量没有设置"
+
+msgid "mid={1}"
+msgstr "mid={1}"
+
+msgid "ERROR: Call operation {1} failed - {2}"
+msgstr "错误：调用操作 {1} 失败 - {2}"
+
+msgid "ERROR: Failed to init agent - {1}"
+msgstr "错误：初始化代理失败 - {1}"
+
+msgid "mid={1}, pid={2}, entry_name={3}, command={4}"
+msgstr "mid={1}, pid={2}, entry_name={3}, command={4}"
+
+msgid "ERROR: Failed to start process {1} - {2}"
+msgstr "错误：进程启动失败 {1} - {2}"
+
+msgid "mid={1}, pid={2}, wait_time={3}, signo={4}"
+msgstr "mid={1}, pid={2}, wait_time={3}, signo={4}"
+
+msgid "ERROR: Failed to stop process {1} - {2}"
+msgstr "错误：进程停止失败 {1} - {2}"
+
+msgid "ERROR: Failed to find entry in running process {1} - {2}"
+msgstr "错误：在运行的进程中查找实体失败 {1} - {2}"
+
+msgid "ERROR: Failed to do status - {1}"
+msgstr "错误：获取状态时失败 - {1}"
+
+msgid "ERROR: unknown status {1} given"
+msgstr "错误：未知的状态 {1}"
+
+msgid "mid={1}, status={2}"
+msgstr "mid={1}, status={2}"
+
+msgid "ERROR: Failed to get status - {1}"
+msgstr "错误：获取状态时失败 - {1}"
+
+msgid "message={1}"
+msgstr "message={1}"
+
+msgid "WARN: Call operation {1} failed, - {2}"
+msgstr "警告：调用操作 {1} 失败，- {2}"
+
+msgid "ERROR: Can't login on SDC"
+msgstr "错误：不能登录到SDC"
+
+msgid "ERROR: Can't connect on SDC"
+msgstr "错误：不能连接到SDC"
+
+msgid "INFO: Connect to SDC as {1}"
+msgstr "信息：以 {1} 连接到SDC"
+
+msgid "dump={1}"
+msgstr "dump={1}"
+
+msgid "sginfo={1}"
+msgstr "sginfo={1}"
+
+msgid "ERROR: usrname on sginfo too long"
+msgstr "错误：sginfo中的usrname太长"
+
+msgid "ERROR: cltname on sginfo too long"
+msgstr "错误：sginfo中的cltname太长"
+
+msgid "ERROR: passwd on sginfo too long"
+msgstr "错误：sginfo中的passwd太长"
+
+msgid "ERROR: grpname on sginfo too long"
+msgstr "错误：sginfo中的grpname太长"
+
+msgid "produce help message"
+msgstr "打印帮助信息"
+
+msgid "print current run_integrator version"
+msgstr "打印当前的服务适配器版本"
+
+msgid "integrator configuration file"
+msgstr "适配器配置文件"
+
+msgid "run integrator in background mode"
+msgstr "后台模式运行适配器"
+
+msgid "print preparing information"
+msgstr "打印准备信息"
+
+msgid "rollback to initial state"
+msgstr "回退到初始状态"
+
+msgid "specify operation key"
+msgstr "指定操作关键字"
+
+msgid "specify operation version"
+msgstr "指定操作版本"
+
+msgid "specify login info"
+msgstr "指定登录信息"
+
+msgid "run_integrator version {1}"
+msgstr "run_integrator版本{1}"
+
+msgid "Compiled on "
+msgstr "编译于 "
+
+msgid "ERROR: --conf or --svckey must be specify at least once"
+msgstr "错误：必须指定--conf或--svckey选项至少一次"
+
+msgid "ERROR: Can't login on ServiceGalaxy."
+msgstr "错误：不能登录到ServiceGalaxy。"
+
+msgid "INFO: Login ServiceGalaxy successfully."
+msgstr "信息：成功登录到ServiceGalaxy。"
+
+msgid "INFO: Logout ServiceGalaxy successfully."
+msgstr "信息：成功登离ServiceGalaxy。"
+
+msgid "ERROR: Failure to load integrator configuration"
+msgstr "错误：加载适配器配置失败"
+
+msgid "ERROR: Can't load library {1}, {2}"
+msgstr "错误：不能加载库文件 {1}, {2}"
+
+msgid "ERROR: unknown encode_type {1}"
+msgstr "错误：未知的encode_type {1}"
+
+msgid "ERROR: one and only one character is allowed for escape node"
+msgstr "错误：escape节点只能配置一个字符"
+
+msgid "ERROR: Can't find host id for {1}"
+msgstr "错误：找不到主机id {1}"
+
+msgid "ERROR: unsupported API"
+msgstr "错误：不支持的API"
+
+msgid "ERROR: Having head, do not support breakpoint."
+msgstr "错误：有头记录，不支持断点"
+
+msgid "ERROR: Having tail, do not support breakpoint."
+msgstr "错误：有尾记录，不支持断点"
+
+msgid "ERROR: rule_file_name error"
+msgstr "错误：rule_file_name错误"
+
+msgid "ERROR: max_open_files too small"
+msgstr "错误：max_open_files配置太小"
+
+msgid ""
+"ERROR: dst_file has defined 2 files with the same directory and file name."
+msgstr "错误：dst_file配置了两个相同目录和相同文件名的输出文件"
+
+msgid "ERROR: flush file {1} failed - {2}"
+msgstr "错误：刷新文件 {1} 失败 - {2}"
+
+msgid "ERROR: Unsupported type given"
+msgstr "错误：不支持的类型"
+
+msgid "ERROR: Parse section resource failure, {1} ({2})"
+msgstr "错误：解析resource章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section resource failure, {1}"
+msgstr "错误：解析resource章节失败，{1}"
+
+msgid "ERROR: Parse section adaptors failure, {1} ({2})"
+msgstr "错误：解析adaptors章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section adaptors failure, {1}"
+msgstr "错误：解析adaptors章节失败，{1}"
+
+msgid "ERROR: integrator.adaptors.adaptor missing."
+msgstr "错误：integrator.adaptors.adaptor 缺失。"
+
+msgid "ERROR: resource.batch must be positive"
+msgstr "错误：resource.batch 必须配置为正值"
+
+msgid "ERROR: resource.concurrency must be between 1 and 64"
+msgstr "错误：resource.concurrency必须介于1和64之间"
+
+msgid "ERROR: resource.disable_global invalid"
+msgstr "错误：resource.disable_global配置无效"
+
+msgid "ERROR: resource.exception_policy should be RETRY, DONE or EXIT"
+msgstr "错误：resource.exception_policy应该配置为RETRY, DONE 或 EXIT"
+
+msgid "ERROR: resource.exception_waits must not be negative"
+msgstr "错误：resource.exception_waits不能是负数"
+
+msgid ""
+"ERROR: resource.options can't be set to FROM_INPUT or FROM_OUTPUT for first "
+"adaptor"
+msgstr ""
+"错误：第一个适配器的resource.options不能设置为FROM_INPUT 或 FROM_OUTPUT"
+
+msgid "ERROR: Duplicate {1} for source.args.arg"
+msgstr "错误：source.args.arg中 {1} 重复"
+
+msgid "ERROR: Parse section source failure, {1} ({2})"
+msgstr "错误：解析source章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section source failure, {1}"
+msgstr "错误：解析source章节失败，{1}"
+
+msgid "ERROR: Duplicate {1} for target.args.arg"
+msgstr "错误：target.args.arg中{1} 重复"
+
+msgid "ERROR: Parse section target failure, {1} ({2})"
+msgstr "错误：解析target章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section target failure, {1}"
+msgstr "错误：解析target章节失败，{1}"
+
+msgid "ERROR: Duplicate {1} for invalid.args.arg"
+msgstr "错误：invalid.args.arg中{1}重复"
+
+msgid "ERROR: Parse section invalid failure, {1} ({2})"
+msgstr "错误：解析invalid章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section invalid failure, {1}"
+msgstr "错误：解析invalid章节失败，{1}"
+
+msgid "ERROR: Duplicate {1} for error.args.arg"
+msgstr "错误：error.args.arg中{1} 重复"
+
+msgid "ERROR: Parse section error failure, {1} ({2})"
+msgstr "错误：解析error章节失败， {1} ({2})"
+
+msgid "ERROR: Parse section error failure, {1}"
+msgstr "错误：解析error章节失败， {1}"
+
+msgid "ERROR: global.field_name is empty"
+msgstr "错误：global.field_name配置为空"
+
+msgid "ERROR: global.field_size must be positive"
+msgstr "错误：global.field_size必须是正值"
+
+msgid "ERROR: global.readonly invalid"
+msgstr "错误：global.readonly配置无效"
+
+msgid "ERROR: duplicate global.field_name {1}"
+msgstr "错误：重复的global.field_name {1}"
+
+msgid "ERROR: Parse section global failure, {1} ({2})"
+msgstr "错误：解析global章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section global failure, {1}"
+msgstr "错误：解析global章节失败，{1}"
+
+msgid ""
+"ERROR: previous adaptor has more inputs, so current adaptor should define "
+"input specifically"
+msgstr "错误：上一个适配器有多个输入，当前适配器需要明确指定输入"
+
+msgid "ERROR: inputs.input.record_type invalid"
+msgstr "错误：inputs.input.record_type无效"
+
+msgid "ERROR: inputs.input.fields.field.factor1 must be zero or positive."
+msgstr "错误：inputs.input.fields.field.factor1必须配置为0或者正值。"
+
+msgid "ERROR: inputs.input.fields.field.factor2 must be positive."
+msgstr "错误：inputs.input.fields.field.factor2必须是正值。"
+
+msgid "ERROR: inputs.input.fields.field.encode_type invalid."
+msgstr "错误：inputs.input.fields.field.encode_type无效。"
+
+msgid "ERROR: inputs.input.fields.field missing."
+msgstr "错误：缺少inputs.input.fields.field"
+
+msgid "ERROR: Parse section inputs failure, {1} ({2})"
+msgstr "错误：解析inputs章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section inputs failure, {1}"
+msgstr "错误：解析inputs章节失败，{1}"
+
+msgid "ERROR: inputs.input missing."
+msgstr "错误：缺少inputs.input。"
+
+msgid "ERROR: output.fields.field.field_size must be positive."
+msgstr "错误：output.fields.field.field_size必须是正值"
+
+msgid "ERROR: Parse section output failure, {1} ({2})"
+msgstr "错误：解析output章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section output failure, {1}"
+msgstr "错误：解析output章节失败，{1}"
+
+msgid "ERROR: summary.items.item.{1}.field.field_name {2} invalid"
+msgstr "错误：summary.items.item.{1}.field.field_name {2} 无效"
+
+msgid "ERROR: summary.items.item.{1}.field.field_type invalid"
+msgstr "错误：summary.items.item.{1}.field.field_type无效"
+
+msgid "ERROR: summary.items.item.{1}.field.field_size must be positive"
+msgstr "错误：summary.items.item.{1}.field.field_size必须是正值"
+
+msgid "ERROR: Parse section summary failure, {1} ({2})"
+msgstr "错误：解析summary章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section summary failure, {1}"
+msgstr "错误：解析summary章节失败，{1}"
+
+msgid "ERROR: distribute.max_open_files must be positive."
+msgstr "错误：distribute.max_open_files必须是正值"
+
+msgid "ERROR: distribute.items.item.rdst_dir invalid"
+msgstr "错误：distribute.items.item.rdst_dir 无效"
+
+msgid "ERROR: distribute.items.item.{1}.fields.field.field_name {2} invalid"
+msgstr "错误：distribute.items.item.{1}.fields.field.field_name {2} 无效"
+
+msgid "ERROR: distribute.items.item.{1}.fields.field.field_type invalid"
+msgstr "错误：distribute.items.item.{1}.fields.field.field_type无效"
+
+msgid "ERROR: distribute.items.item.{1}.fields.field.align_mode invalid"
+msgstr "错误：distribute.items.item.{1}.fields.field.align_mode无效"
+
+msgid "ERROR: distribute.items.item.{1}.fields.field.field_size must be zero or positive"
+msgstr "错误：distribute.items.item.{1}.fields.field.field_size必须是0或者正值"
+
+msgid "ERROR: distribute.items.item.{1}.fields.field.precision must be zero or positive"
+msgstr "错误：distribute.items.item.{1}.fields.field.precision必须是0或者正值"
+
+msgid "ERROR: distribute.items.item.{1}.fields.field.action invalid"
+msgstr "错误：distribute.items.item.{1}.fields.field.action无效"
+
+msgid "ERROR: Parse section distribute failure, {1} ({2})"
+msgstr "错误：解析distribute章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section distribute failure, {1}"
+msgstr "错误：解析distribute章节失败，{1}"
+
+msgid "ERROR: stat.sort invalid"
+msgstr "错误：stat.sort无效"
+
+msgid "ERROR: stat.fields.field.field_name {1} invalid"
+msgstr "错误：stat.fields.field.field_name {1} 无效"
+
+msgid "ERROR: stat.fields.field.is_key invalid"
+msgstr "错误：stat.fields.field.is_key无效"
+
+msgid "ERROR: key not defined for stat.fields"
+msgstr "错误：stat.fields中没有定义key"
+
+msgid "WARN: sort option is on, but no keys provided, turn it off"
+msgstr "警告：排序选项配置为开，但没有提供关键字，系统自动关闭"
+
+msgid "ERROR: Duplicate {1} for args.arg"
+msgstr "错误：args.arg中 {1} 重复"
+
+msgid "ERROR: Parse section args failure, {1} ({2})"
+msgstr "错误：解析args章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section args failure, {1}"
+msgstr "错误：解析args章节失败，{1}"
+
+msgid "field_name={1}, allow_input={2}"
+msgstr "field_name={1}, allow_input={2}"
+
+msgid ""
+"ERROR: first field_name in adaptor.input.table.fields must be record_tag"
+msgstr "错误：adaptor.input.table.fields中的第一个field_name必须是record_tag"
+
+msgid ""
+"ERROR: first field's factor2 in adaptor.input.table.fields must be at least "
+"10"
+msgstr ""
+"错误：adaptor.input.table.fields中的第一个字段的factor2长度至少应该为10"
+
+msgid "ERROR: tag = {1} and len is variable, but block_filler is -1"
+msgstr "错误：tag = {1} 并且长度是变长的，但是block_filler为-1"
+
+msgid "tag_={1}, len_={2}"
+msgstr "tag_={1}, len_={2}"
+
+msgid "tag_str={1}, len_={2}"
+msgstr "tag_str={1}, len_={2}"
+
+msgid "ERROR: Cannot support if parent and children are all variable."
+msgstr "错误：不支持父节点和子节点都是变长配置"
+
+msgid "ERROR: parent length not correct"
+msgstr "错误：父节点长度不正确"
+
+msgid "ERROR: field length exceeds MAX_BLOCK_SIZE"
+msgstr "错误：字段长度超过MAX_BLOCK_SIZE"
+
+msgid "ERROR: field_name {1} factor2 is too small. Increase it to at least {2}"
+msgstr "错误：field_name {1}的长度（factor2）太小。增大到至少{2}"
+
+msgid "ERROR: field_name {1} factor2 is too small. Increase it"
+msgstr "错误：field_name {1}的长度（factor2）太小，请增大配置"
+
+msgid "record={1}"
+msgstr "record={1}"
+
+msgid "ERROR: Failed to create operation adaptor for {1}, {2}"
+msgstr "错误：为 {1} 创建操作适配器失败，{2}"
+
+msgid "ERROR: Can't find operation adaptor for {1}"
+msgstr "错误：找不到{1}的操作适配器"
+
+msgid "ERROR: Failed to create input class for {1}, {2}"
+msgstr "错误：为 {1} 创建输入类失败，{2}"
+
+msgid "ERROR: Can't find input class for {1}"
+msgstr "错误：找不到{1}的输入类"
+
+msgid "ERROR: Can't create output class {1} for given flags {2}"
+msgstr "错误：对于给定的标志{2}无法创建输出类{1}"
+
+msgid "ERROR: Failed to create output class for {1}, {2}"
+msgstr "错误：为 {1}创建输出类失败，{2}"
+
+msgid "ERROR: Can't find output class for {1}"
+msgstr "错误：找不到 {1} 的输出类"
+
+msgid "user_id={1}"
+msgstr "user_id={1}"
+
+msgid "ERROR: Unknown operation key {1}"
+msgstr "错误：未知的操作关键字{1}"
+
+msgid "ERROR: operation contract failure({1}), global_size doesn't match."
+msgstr "错误：操作协议失败({1})，global_size不匹配"
+
+msgid ""
+"ERROR: operation contract failure({1}), field size mismatch. index({2}), "
+"request({3}) > required({4})"
+msgstr ""
+"错误：操作协议失败({1})，字段长度不匹配。index({2}), request({3}) > required"
+"({4})"
+
+msgid ""
+"ERROR: operation contract failure({1}), input size mismatch. request({2}) > "
+"required({3})"
+msgstr "错误：操作协议失败({1})，输入大小不匹配。请求({2}) > 需要({3})"
+
+msgid "output_idx={1}"
+msgstr "output_idx={1}"
+
+msgid "ERROR: source.args.arg.src_dir value invalid."
+msgstr "错误：source.args.arg.src_dir无效。"
+
+msgid "ERROR: source.args.arg.dup_dir value invalid."
+msgstr "错误：source.args.arg.dup_dir无效。"
+
+msgid "ERROR: source.args.arg.bak_dir value invalid."
+msgstr "错误：source.args.arg.bak_dir无效。"
+
+msgid "ERROR: source.args.arg.tmp_dir value invalid."
+msgstr "错误：source.args.arg.tmp_dir无效。"
+
+msgid "ERROR: source.args.arg.ftl_dir value invalid."
+msgstr "错误：source.args.arg.ftl_dir无效。"
+
+msgid "ERROR: source.args.arg.bak_flag value invalid."
+msgstr "错误：source.args.arg.bak_flag无效。"
+
+msgid "ERROR: source.args.arg.deal_flag value invalid."
+msgstr "错误：source.args.arg.deal_flag无效。"
+
+msgid "ERROR: source.args.arg.protocol value should begin with sftp://"
+msgstr "错误：source.args.arg.protocol 值应当以 sftp:// 开始"
+
+msgid ""
+"ERROR: rule_check is defined but source.args.arg.deal_flag is not CHECK."
+msgstr "错误：定义了rule_check，但是source.args.arg.deal_flag并不是CHECK。"
+
+msgid "ERROR: Can't create function for rule_hcheck, {1}"
+msgstr "错误：不能为rule_hcheck创建函数，{1}"
+
+msgid "ERROR: Can't create function for rule_condition, {1}"
+msgstr "错误：不能为rule_condition创建函数，{1}"
+
+msgid "ERROR: Can't create function for rule_check, {1}"
+msgstr "错误：不能为rule_check创建函数，{1}"
+
+msgid "ERROR: Can't move file {1} to {2}, {3}"
+msgstr "错误：不能移动文件{1} to {2}, {3}"
+
+msgid "ERROR: filename too long for target file {1}"
+msgstr "错误：目标文件{1}文件名太长"
+
+msgid "ERROR: Can't stat target file {1}, {2}"
+msgstr "错误：不能获取目标文件 {1} 的状态, {2}"
+
+msgid "ERROR: Can't get log from database, source file {1}, {2}"
+msgstr "错误：不能从数据库得到日志，源文件 {1}, {2}"
+
+msgid "ERROR: Dealing file {1} duplicate, {2}"
+msgstr "错误：处理文件 {1} 重复， {2}"
+
+msgid "ERROR: Can't open source file {1}, {2}"
+msgstr "错误：不能打开源文件 {1}, {2}"
+
+msgid "ERROR: Can't seek source file {1}, {2}"
+msgstr "错误：无法定位源文件 {1}, {2}"
+
+msgid "ERROR: Can't read from {1} - {2}"
+msgstr "错误：不能从 {1} 中读取 - {2}"
+
+msgid "ERROR: Can't pass rule_hcheck for {1}"
+msgstr "错误：{1} 的rule_hcheck检查通不过"
+
+msgid "ERROR: Too many rows in file {1}"
+msgstr "错误：文件 {1} 中记录太多"
+
+msgid "ERROR: Can't lseek file {1} - {2}"
+msgstr "错误：不能定位（lseek）文件 {1} - {2}"
+
+msgid "ERROR: Can't write to {1} - {2}"
+msgstr "错误：不能写到 {1} - {2}"
+
+msgid "ERROR: Can't rename {1} to {2} - {3}"
+msgstr "错误：不能重命名 {1} to {2} - {3}"
+
+msgid "ERROR: Can't remove {1} - {2}"
+msgstr "错误：不能删除 {1} - {2}"
+
+msgid "ERROR: Can't execute {1} - {2}"
+msgstr "错误：不能执行 {1} - {2}"
+
+msgid "argc={1}"
+msgstr "argc={1}"
+
+msgid "Allowed options"
+msgstr "允许的选项"
+
+msgid "print current run_log2jms version"
+msgstr "打印当前run_log2jms版本号"
+
+msgid "run_long2jms in background mode"
+msgstr "在后台执行run_log2jms"
+
+msgid "specify JMS broker URI"
+msgstr "指定JMS代理的URI"
+
+msgid "specify JMS producer topic URI"
+msgstr "指定JMS生产者主题URI"
+
+msgid "INFO: {1} exit normally in help mode."
+msgstr "信息：{1} 在帮助模式下正常退出。"
+
+msgid "run_log2jms version "
+msgstr "run_log2jms 版本号"
+
+msgid "ERROR: {1} start failure, {2}."
+msgstr "错误：{1} 启动失败，{2}。"
+
+msgid "ERROR: sftp prefix for src_dir {1} and tmp_dir {2} should be the same"
+msgstr "错误：src_dir的前缀 {1} 和tmp_dir的前缀 {2} 必须一样"
+
+msgid "ERROR: Can't find hostid for node id {1}"
+msgstr "错误：找不到node id {1}对应的主机ID"
+
+msgid "ERROR: Can't find hostname for node id {1}"
+msgstr "错误：不到node id {1}对应的主机名"
+
+msgid "ERROR: Can't join application"
+msgstr "错误：不能加入应用程序"
+
+msgid ""
+"WARN: Operation Adaptor {1} doesn't support batch mode, reset batch to 1"
+msgstr "警告：操作适配器{1}不支持批量模式，重置批量值为1"
+
+msgid "WARN: Operation Adaptor {1} batch mode on, reset concurrency to 1"
+msgstr "警告：操作适配器{1}批量模式为开，重置并发值为1"
+
+msgid ""
+"WARN: Operation Adaptor {1} doesn't support concurrency mode, reset to 1"
+msgstr "警告：操作适配器{1}不支持并发模式，重置并发值为1"
+
+msgid "ERROR: Too many error records"
+msgstr "错误：错误记录太多"
+
+msgid "WARN: acall failed, op_name {1} - {2}"
+msgstr "警告：执行异步调用acall()失败，操作名 {1} - {2}"
+
+msgid "WARN: getrply failed, op_name {1}, urcode {2} - {3}"
+msgstr "警告：调用getrply()失败，操作名 {1}, 用户代码 {2} - {3}"
+
+msgid "WARN: call failed, op_name {1}, urcode {2} - {3}"
+msgstr "警告：调用call()失败，操作名 {1}, 用户代码 {2} - {3}"
+
+msgid "ERROR: operation contract failure, global_size doesn't match."
+msgstr "错误：操作协议失败，global_size不匹配"
+
+msgid "ERROR: operation contract failure, output_size doesn't match."
+msgstr "错误：操作协议失败，output_size不匹配"
+
+msgid "ERROR: Caught signal, exiting"
+msgstr "错误：捕获到信号，退出"
+
+msgid "ERROR: Encounter exception and done this file."
+msgstr "错误：遇到异常，当前文件处理结束"
+
+msgid "ERROR: Fatal error encountered, exiting"
+msgstr "错误：遇到严重错误，退出"
+
+msgid "ERROR: workflow.entries.entry.entry_name is empty"
+msgstr "错误：workflow.entries.entry.entry_name为空"
+
+msgid "ERROR: workflow.entries.entry.command is empty"
+msgstr "错误：workflow.entries.entry.command为空"
+
+msgid "ERROR: workflow.entries.entry.restart invalid"
+msgstr "错误：workflow.entries.entry.restart无效"
+
+msgid "ERROR: workflow.entries.entry.policy invalid"
+msgstr "错误：workflow.entries.entry.policy无效"
+
+msgid "ERROR: workflow.dependencies.dependency.entry_name is empty"
+msgstr "错误：workflow.dependencies.dependency.entry_name为空"
+
+msgid "ERROR: workflow.dependencies.dependency.dependency_name is empty"
+msgstr "错误：workflow.dependencies.dependency.dependency_name为空"
+
+msgid "ERROR: source.args.arg.rule_record_len value invalid."
+msgstr "错误：source.args.arg.rule_record_len无效。"
+
+msgid "ERROR: Can't create function for rule_record_len, {1}"
+msgstr "错误：无法为rule_record_len创建函数，{1}"
+
+msgid "ERROR: Can't read enough data from file {1}"
+msgstr "错误：不能从文件{1}中读取足够的数据"
+
+msgid "ERROR: source.args.arg.hostname missing."
+msgstr "错误：source.args.arg.hostname缺失。"
+
+msgid "ERROR: source.args.arg.port missing."
+msgstr "错误：source.args.arg.port缺失。"
+
+msgid "ERROR: source.args.arg.tcpkeepalive value invalid."
+msgstr "错误：source.args.arg.tcpkeepalive无效。"
+
+msgid "ERROR: source.args.arg.nodelay value invalid."
+msgstr "错误：source.args.arg.nodelay无效。"
+
+msgid "ERROR: source.args.arg.max_connections value invalid."
+msgstr "错误：source.args.arg.max_connections无效。"
+
+msgid "ERROR: Can't insert log to database, {1}"
+msgstr "错误：不能在数据库中插入日志，{1}"
+
+msgid "error={1}"
+msgstr "error={1}"
+
+msgid "ERROR: rule_table_name error"
+msgstr "错误：rule_table_name错误"
+
+msgid "input_idx={1}, idx={2}"
+msgstr "input_idx={1}, idx={2}"
+
+msgid "set database user name"
+msgstr "设置数据库用户"
+
+msgid "set database password"
+msgstr "设置数据库密码"
+
+msgid "set database connect string"
+msgstr "设置数据库连接串"
+
+msgid "set prefix of output XML file"
+msgstr "设置输出XML文件的前缀"
+
+msgid "generate server side XML file"
+msgstr "生成服务端XML文件"
+
+msgid "ERROR: Memory allocation failure"
+msgstr "错误：分配内存失败"
+
+msgid "ERROR: Can't open file {1}"
+msgstr "错误：不能打开文件{1}"
+
+msgid "ERROR: Invalid record_mode {1}"
+msgstr "错误：无效的record_mode{1}"
+
+msgid "ERROR: unknown record_type {1}"
+msgstr "错误：未知的record_type {1}"
+
+msgid "ERROR: unknown field_source {1}"
+msgstr "错误：未知的field_source {1}"
+
+msgid ""
+"ERROR: Can't find field_serial={1}, file_type={2}, record_serial={3}"
+msgstr "错误：找不到 field_serial= {1}, file_type= {2}, record_serial= {3}"
+
+msgid ""
+"ERROR: Can't find field_serial={1}"
+msgstr "错误：找不到 field_serial= {1}"
+
+msgid "ERROR: unknown field_type {1}"
+msgstr "错误：未知的field_type {1}"
+
+msgid "ERROR: unknown align_mode {1}"
+msgstr "错误：未知的align_mode {1}"
+
+msgid "ERROR: unknown action {1}"
+msgstr "错误：未知的action {1}"
+
+msgid "ERROR: Only one inputs.input is allowed."
+msgstr "错误：只允许有一个inputs.input"
+
+msgid "ERROR: source.args.arg.options value invalid."
+msgstr "错误：source.args.arg.options无效。"
+
+msgid "ERROR: source.args.arg.align_time value invalid, {1}"
+msgstr "错误：source.args.arg.align_time无效，{1}"
+
+msgid "ERROR: source.args.arg.pre_sql invalid"
+msgstr "错误：source.args.arg.pre_sql无效"
+
+msgid "ERROR: source.args.arg.pre_sql has bindings"
+msgstr "错误：source.args.arg.pre_sql 已经绑定"
+
+msgid "ERROR: source.args.arg.exp_sql value missing"
+msgstr "错误：source.args.arg.exp_sql缺失"
+
+msgid "ERROR: source.args.arg.exp_sql invalid"
+msgstr "错误：source.args.arg.exp_sql无效"
+
+msgid "ERROR: source.args.arg.post_sql invalid"
+msgstr "错误：source.args.arg.post_sql无效"
+
+msgid ""
+"WARN: Transaction consistency is not guaranteed with options=PER_ROWS and "
+"post_sql not empty"
+msgstr "警告：设置了PER_ROWS选项并且post_sql非空，无法保证事务的一致性"
+
+msgid "value={1}"
+msgstr "value={1}"
+
+msgid "specify JMS LOG topic URI"
+msgstr "指定JMS LOG的主题URI"
+
+msgid "enable LOG to JMS process"
+msgstr "激活LOG到JMS进程"
+
+msgid "ERROR: Can't create directory {1}"
+msgstr "错误：不能创建目录{1}"
+
+msgid "ERROR: Can't open database: {1}"
+msgstr "错误：不能打开数据库：{1}"
+
+msgid "ERROR: PRAGMA synchronous=0 failed: {1}"
+msgstr "错误：PRAGMA synchronous=0 失败：{1}"
+
+msgid "ERROR: PRAGMA journal_mode=PERSIST failed: {1}"
+msgstr "错误：PRAGMA journal_mode=PERSIST 失败：{1}"
+
+msgid "ERROR: PRAGMA locking_mode=EXCLUSIVE failed: {1}"
+msgstr "错误：PRAGMA locking_mode=EXCLUSIVE 失败：{1}"
+
+msgid "ERROR: {1} failed: {2}"
+msgstr "错误：{1} 失败：{2}"
+
+msgid "INFO: {1} -g {2} -p {3} started successfully."
+msgstr "信息：{1} -g {2} -p {3} 启动成功。"
+
+msgid "INFO: {1} -g {2} -p {3} stopped successfully."
+msgstr "信息：{1} -g {2} -p {3} 停止成功。"
+
+msgid "ERROR: Can't prepare {1}, {2}"
+msgstr "错误：不能准备 {1}, {2}"
+
+msgid "ERROR: Can't reset select statement, {1}"
+msgstr "错误：不能重置查询语句，{1}"
+
+msgid "ERROR: Can't step select statement, {1}"
+msgstr "错误：不能执行查询语句，{1}"
+
+msgid "print current run_schd version"
+msgstr "打印当前run_schd的版本号"
+
+msgid "run scheduler in background mode"
+msgstr "以后台模式运行调度程序"
+
+msgid "scheduler configuration file"
+msgstr "调度配置文件"
+
+msgid "specify schedule key"
+msgstr "指定调度关键字"
+
+msgid "specify schedule version"
+msgstr "指定调度版本"
+
+msgid "specify maximum parallel running entries"
+msgstr "指定最大并发执行数量"
+
+msgid "specify seconds to check alive status"
+msgstr "指定检查活动状态的秒数"
+
+msgid "continue from last status"
+msgstr "从上一个状态继续执行"
+
+msgid "specify JMS consumer topic URI"
+msgstr "指定JMS消费者主题URI"
+
+msgid "run_schd version "
+msgstr "run_schd版本号"
+
+msgid "ERROR: --conf or --schd_key must be specify at least once\n"
+msgstr "错误：至少应该指定--conf or --schd_key选项中的一个\n"
+
+msgid "ERROR: {1} start failure."
+msgstr "错误：{1} 启动失败。"
+
+msgid "ERROR: Failure to load scheduler configuration"
+msgstr "错误：加载调度配置失败"
+
+msgid "status={1}, text={2}"
+msgstr "status={1}, text={2}"
+
+msgid "FATAL: internal error"
+msgstr "致命：内部错误"
+
+msgid "entry_name={1}"
+msgstr "entry_name={1}"
+
+msgid "ERROR: Can't find configuration for {1}"
+msgstr "错误：找不到{1}的配置"
+
+msgid "FATAL: Can't find entry for {1}"
+msgstr "致命：找不到{1}的条目"
+
+msgid "ERROR: internal error"
+msgstr "错误：内部错误"
+
+msgid "ERROR: non-restartable entry {1} died, exiting"
+msgstr "错误：不可重启的条目{1}停止运行，退出"
+
+msgid "ERROR: Can't restart entry {1} on host id {2}"
+msgstr "错误：不能在主机{2}上重启条目{1}"
+
+msgid "ERROR: Can't init context"
+msgstr "错误：不能初始化上下文"
+
+msgid "tcpkeepalive={1}, nodelay={2}"
+msgstr "tcpkeepalive={1}, nodelay={2}"
+
+msgid "ERROR: Duplicate sa_input creator for {1}"
+msgstr "错误：{1}中重复的sa_input创建者"
+
+msgid "ERROR: Duplicate sa_output creator for {1}"
+msgstr "错误：{1}中重复的sa_output创建者"
+
+msgid "ERROR: Duplicate sa_base creator for {1}"
+msgstr "错误：{1}中重复的sa_base创建者"
+
+msgid "ERROR: end of input reached without terminating quote\n"
+msgstr "错误：达到输入末尾，但未找到终止引号\n"
+
+msgid "ERROR: end of input reached without terminating */\n"
+msgstr "错误：达到输入末尾，但未找到结束*/\n"
+
+msgid "specify input XML configuration file"
+msgstr "指定输入XML配置文件"
+
+msgid "specify output XML configuration file"
+msgstr "指定输出XML配置文件"
+
+msgid "INFO: Parse finished successfully"
+msgstr "信息：解析成功完成"
+
+msgid "flags={1}"
+msgstr "flags={1}"
+
+msgid "ERROR: Can't convert to {1} for token {2}"
+msgstr "错误：不能把标记 {2} 转到 {1}"
+
+msgid "ERROR: expect string for token {1}"
+msgstr "错误：标记 {1} 期望字符串"
+
+msgid "_raw_type={1}"
+msgstr "_raw_type={1}"
+
+msgid "ERROR: Invalid atomic_type {1}"
+msgstr "错误：无效的atomic_type {1}"
+
+msgid "ERROR: {1} is not an input table"
+msgstr "错误：{1} 不是输入表。"
+
+msgid "ERROR: variable {1}.{2} not found in input table"
+msgstr "错误：变量 {1}.{2} 不在输入表中"
+
+msgid "ERROR: variable {1}.{2} not found in output tables"
+msgstr "错误：变量 {1}.{2}不在输出表中"
+
+msgid "ERROR: Only input/ouput is allowed for direction {1}"
+msgstr "错误：direction {1} 只允许input或output"
+
+msgid "ERROR: variable {1}.{2} not found in input/output tables"
+msgstr "错误：变量 {1}.{2}不在输入/输出表中"
+
+msgid "ERROR: variable {1}.{2} conflict both in input and output tables"
+msgstr "错误：变量 {1}.{2}在输入/输出表中定义冲突"
+
+msgid "ERROR: variable {1} conflict in input, output and temporary tables"
+msgstr "错误：变量 {1}.{2}在输入、输出、临时表中定义冲突"
+
+msgid "ltype={1}, rtype={2}"
+msgstr "ltype={1}, rtype={2}"
+
+msgid "ERROR: Invalid field given"
+msgstr "错误：无效字段"
+
+msgid "ERROR: operation * is not allowed for expresssion"
+msgstr "错误：表达式不允许操作符*"
+
+msgid "input_file={1}, output_file={2}"
+msgstr "input_file={1}, output_file={2}"
+
+msgid "ERROR: mkstemp() failure, {1}"
+msgstr "错误：调用mkstemp()函数失败，{1}"
+
+msgid "ERROR: open temp file [{1}] failure, {2}"
+msgstr "错误：打开临时文件 {1} 失败 - {2}"
+
+msgid "ERROR: write code to file [{1}] failure, {2}"
+msgstr "错误：写入代码到文件 {1} 失败 - {2}"
+
+msgid "ERROR: Parse failed."
+msgstr "错误：解析失败。"
+
+msgid "ERROR: Severe error found. Stop syntax checking."
+msgstr "错误：发现严重错误。停止语法检查。"
+
+msgid "ERROR: Above errors found during syntax checking."
+msgstr "错误：语法检查过程中发现以上错误。"
+
+msgid "config_file={1}"
+msgstr "config_file={1}"
+
+msgid "ERROR: Parse section services failure, {1} ({2})"
+msgstr "错误：解析services章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section services failure, {1}"
+msgstr "错误：解析services章节失败，{1}"
+
+msgid "ERROR: input.table.field_name is empty"
+msgstr "错误：input.table.field_name 为空"
+
+msgid "ERROR: input.table.fields.field.field_size must be positive."
+msgstr "错误：input.table.fields.field.field_size必须是正值。"
+
+msgid "ERROR: Parse section input failure, {1} ({2})"
+msgstr "错误：解析input章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section input failure, {1}"
+msgstr "错误：解析input章节失败，{1}"
+
+msgid "ERROR: output.table.field_name is empty"
+msgstr "错误：output.table.field_name 为空"
+
+msgid "ERROR: output.table.fields.field.field_size must be positive."
+msgstr "错误：output.table.fields.field.field_size必须是正值"
+
+msgid "ERROR: Parse section processes failure, {1} ({2})"
+msgstr "错误：解析processes章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section processes failure, {1}"
+msgstr "错误：解析processes章节失败，{1}"
+
+msgid "ERROR: Can't start transaction"
+msgstr "错误：不能开始事务"
+
+msgid "ERROR: Can't commit transaction"
+msgstr "错误：不能提交事务"
+
+msgid "ERROR: Can't create {1}, {2}"
+msgstr "错误：不能创建 {1}, {2}"
+
+msgid "ERROR: Can't insert {1}, {2}"
+msgstr "错误：不能插入 {1}, {2}"
+
+msgid "ERROR: Can't bind select statement, {1}"
+msgstr "错误：不能绑定查询语句，{1}"
+
+msgid "ERROR: get DUP config failed, svc_key={1}, version={2}"
+msgstr "错误：获取查重配置失败，svc_key={1}, version={2}"
+
+msgid "ERROR: input should be defined once and only once."
+msgstr "错误：输入只能定义一次。"
+
+msgid "ERROR: Can't find rule_dup in entry args.arg.name"
+msgstr "错误：在args.arg.name中找不到rule_dup"
+
+msgid "ERROR: Can't create function for rule_dup, {1}"
+msgstr "错误：不能为rule_dup创建函数，{1}"
+
+msgid "specify configuration version"
+msgstr "指定配置版本号"
+
+msgid "specify partition id"
+msgstr "指定分区ID"
+
+msgid "ERROR: partition out of range."
+msgstr "错误：分区超出范围。"
+
+msgid "ERROR: No operation provided on sgcompile time"
+msgstr "错误：在sgconmpile时，没有发现操作"
+
+msgid "ERROR: Failed to advertise operation {1}"
+msgstr "错误：发布操作{1}失败"
+
+msgid "ERROR: Failure to load DUP configuration"
+msgstr "错误：加载查重配置失败"
+
+msgid "ERROR: resource.enable_cross value invalid."
+msgstr "错误：resource.enable_cross无效。"
+
+msgid "ERROR: Current node {1} not in the dup list."
+msgstr "错误：当前节点 {1} 不在查重列表。"
+
+msgid "ERROR: resource.auto_create value invalid."
+msgstr "错误：resource.auto_create无效。"
+
+msgid "ERROR: Failure to load BPS configuration, svc_key={1}"
+msgstr "错误：加载BPS配置失败，业务代码={1}"
+
+msgid "ERROR: services.service missing."
+msgstr "错误：services.service 缺失。"
+
+msgid "ERROR: input.table.fields.field missing."
+msgstr "错误：input.table.fields.field 缺失。"
+
+msgid "ERROR: input.table missing."
+msgstr "错误：input.table 缺失。"
+
+msgid "ERROR: Missing connecting to SDC"
+msgstr "错误：到SDC的链接丢失"
+
+msgid "ERROR: input_serial {1} out of range"
+msgstr "错误：input_serial {1}超出范围"
+
+msgid "ERROR: Unknown format for {1}"
+msgstr "错误：对于 {1} 未知的格式"
+
+msgid "specify operation keys"
+msgstr "指定操作关键字"
+
+msgid "specify service keys file"
+msgstr "指定服务关键字文件"
+
+msgid "specify DBC's configuration key"
+msgstr "指定DBC配置关键字"
+
+msgid "specify DBC's configuration version"
+msgstr "指定DBC配置版本号"
+
+msgid "run in DBC mode"
+msgstr "在DBC模式下运行"
+
+msgid "ERROR: -k or -f must specify at lease once"
+msgstr "错误：至少要制定-k or -f选项中的一个"
+
+msgid "ERROR: Can't login on DBC - {1}"
+msgstr "错误：不能登录到DBC - {1}"
+
+msgid "ERROR: Can't login on SDC - {1}"
+msgstr "错误：不能登录到SDC - {1}"
+
+msgid "ERROR: Can't connect to SDC - {1}"
+msgstr "错误：不能连接到SDC - {1}"
+
+msgid "ERROR: svc_key {1} not found."
+msgstr "错误：业务代码 {1}找不到。"
+
+msgid "ERROR: args {1} too long"
+msgstr "错误：args {1}太长"
+
+msgid "ERROR: libname {1} too long"
+msgstr "错误：库文件名称{1}太长"
+
+msgid "ERROR: Can't stat file {1}"
+msgstr "错误：不能获取文件 {1} 的状态"
+
+msgid "WARN: Can't seek file {1} - {2}"
+msgstr "警告：不能定位文件  {1} - {2}"
+
+msgid "ERROR: rollback invalid"
+msgstr "错误：回滚无效"
+
+msgid "ERROR: rollback_script missing"
+msgstr "错误：缺少rollback_script"
+
+msgid "ERROR: failed to insert/update record into table {1}"
+msgstr "错误：插入/更新记录到表 {1} 失败"
+
+msgid "ERROR: failed to delete record from table {1}"
+msgstr "错误：删除表 {1} 中的记录失败"
+
+msgid "raw_file_name={1}, file_sn={2}"
+msgstr "raw_file_name={1}, file_sn={2}"
+
+msgid "ERROR: failed to execute rollback script {1}"
+msgstr "错误：执行回滚脚本 {1} 失败"
+
+msgid "ERROR: failed to create/execute statement {1}"
+msgstr "错误：创建/执行语句 {1} 失败"
+
+msgid "ERROR: Failed to create directory {1}"
+msgstr "错误：创建目录 {1} 失败"
+
+msgid "ERROR: Failed to create directory {1} on {2} - {3}"
+msgstr "错误：创建节点 {2} 上的目录 {1} 失败 - {3}"
+
+msgid "ERROR: Can't put {1} to {2} on {3} - {4}"
+msgstr "错误：不能把文件 {1} 上传到节点 {3} 的文件 {2} - {4}"
+
+msgid "ERROR: Can't rename {1} to {2} on {3} - {4}"
+msgstr "错误：不能重命名节点 {3} 上的文件 {1} 到 {2} - {4}"
+
+msgid "mid={1}, entry_name={2}, hostname={3}, command={4}"
+msgstr "mid={1}, entry_name={2}, hostname={3}, command={4}"
+
+msgid "INFO: Process {1} for entry_name {2} on {3} started successfully - {4}."
+msgstr "信息：节点 {2} 主机 {3} 的进程 {1} 启动成功 - {4}。"
+
+msgid "mid={1}, pid={2}"
+msgstr "mid={1}, pid={2}"
+
+msgid "INFO: Process {1} for entry_name {2} on {3} stopped successfully."
+msgstr "信息：节点 {2} 主机 {3} 的进程 {1} 停止成功。"
+
+msgid "FATAL: entry_name {1} not found in configuration"
+msgstr "错误：节点 {1} 在配置文件中找不到"
+
+msgid "FATAL: Can't find configuration for {1}"
+msgstr "致命：不能找到 {1} 的配置文件"
+
+msgid "entry_name={1}, undo_id={2}"
+msgstr "entry_name={1}, undo_id={2}"
+
+msgid "hostname={1}, pid={2}"
+msgstr "hostname={1}, pid={2}"
+
+msgid "mid={1}, entry_name={2}"
+msgstr "mid={1}, entry_name={2}"
+
+msgid "ERROR: Failed to erase entry {1} - {2}"
+msgstr "错误：删除节点 {1} 失败 － {2}"
+
+msgid "remove all files of input directory"
+msgstr "删除输入目录下的所有文件"
+
+msgid "specify JMS producer/consumer topic URI suffix"
+msgstr "指定JMS 生产者/消费者 主题URI后缀"
+
+msgid "WARN: SASUFFIXURI environment not set, disable JMS reporting"
+msgstr "警告：SASUFFIXURI环境变量未设置，JMS报告功能被关闭"
+
+msgid "ERROR: file serial out of range"
+msgstr "错误：文件序列号越界"
+
+msgid "ERROR: summary.items.item.rollback invalid"
+msgstr "错误：summary.items.item.rollback 无效"
+
+msgid "field_name={1}"
+msgstr "field_name={1}"
+
+msgid "ERROR: environment variable LOGNAME not set"
+msgstr "错误：环境变量 LOGNAME 未设置"
+
+msgid "ERROR: Failed to create directory {1} - {2}"
+msgstr "错误：不能创建目录 {1} - {2}"
+
+msgid "ERROR: Can't rollback since zip_cmd is set"
+msgstr "设置了zip_cmd，不能回退"
+
+msgid "ERROR: Can't rollback since bak_flag is REMOVE"
+msgstr "错误：bak_flag为REMOVE，不能回退"
+
+msgid "ERROR: Can't read directory {1} on {2} - {3}"
+msgstr "错误：不能读取节点 {2} 上的目录 {1} - {3}"
+
+msgid "ERROR: Can't get file {1} on {2} - {3}"
+msgstr "错误：不能获取节点 {2} 上的文件 {1} - {3}"
+
+msgid "ERROR: Can't remove {1} on {2} - {3}"
+msgstr "错误：不能删除节点 {2} 上的 {1} - {3}"
+
+msgid "specify directories to watch"
+msgstr "指定需要监控的目录列表"
+
+msgid "specify seconds to check log"
+msgstr "指定日志检查的秒数"
+
+msgid "specify encoding of log content"
+msgstr "指定日志内容的编码"
+
+msgid ""
+"ERROR: records in sqlite {1} is not consistent with in database {2}, please "
+"delete database log"
+msgstr ""
+"错误：在sqlite {1} 中的记录与在数据库 {2} 中的记录不一致，请"
+"删除数据库日志"
+
+msgid "ERROR: Can't get data from select statement, {1}"
+msgstr "错误：不能从选择语句中获取数据， {1}"
+
+msgid "ERROR: workflow.entries.entry.enable_proxy invalid"
+msgstr "错误：workflow.entries.entry.enable_proxy 节点无效"
+
+msgid "ERROR: workflow.entries.entry.enable_cproxy invalid"
+msgstr "错误：workflow.entries.entry.enable_cproxy 节点无效"
+
+msgid "ERROR: workflow.entries.entry.enable_iproxy invalid"
+msgstr "错误：workflow.entries.entry.enable_iproxy 节点无效"
+
+msgid "ERROR: workflow.entries.entry.enable_uproxy invalid"
+msgstr "错误：workflow.entries.entry.enable_uproxy 节点无效"
+
+msgid "print current schd_agent version"
+msgstr "打印当前schd_agent版本"
+
+msgid "run schd_agent in background mode"
+msgstr "以后台模式执行schd_agent"
+
+msgid "user name on which to be executed"
+msgstr "待执行的用户名"
+
+msgid "hostname on which to be executed"
+msgstr "待执行的主机名"
+
+msgid "execute command"
+msgstr "执行命令"
+
+msgid "schd_agent version "
+msgstr "schd_agent版本 "
+
+msgid "signo={1}"
+msgstr "signo={1}"
+
+msgid "ERROR: entry_name {1} not found in configuration"
+msgstr "错误：节点 {1} 在配置文件中找不到"
+
+msgid "entry_name={1}, policy={2}, file_count={3}, status={4}"
+msgstr "entry_name={1}, policy={2}, file_count={3}, status={4}"
+
+msgid "ERROR: Can't delete {1}, {2}"
+msgstr "错误：不能删除 {1}， {2}"
+
+msgid "specify JMS producer/consumer/logger topic URI suffix"
+msgstr "指定JMS 生产者/消费者/日志 主题URI后缀"
+
+msgid "how much polltime to count pending files"
+msgstr "等待多少时间重新计算积压文件数"
+
+msgid "specify stop timeout in seconds before kill forcefully"
+msgstr "指定强制杀掉进程前等待的超时秒数"
+
+msgid "specify stop signo via kill"
+msgstr "指定杀进程时发送的信号"
+
+msgid "seconds={1}"
+msgstr "seconds={1}"
+
+msgid "ERROR: redo is not allowed since entry {1} is in clean"
+msgstr "错误：节点 {1} 处于清理状态，不允许重入"
+
+msgid "ERROR: policy {1} invalid"
+msgstr "错误：策略 {1} 无效"
+
+msgid "ERROR: Can't erase entry {1}"
+msgstr "错误：不能删除节点 {1}"
+
+msgid "ERROR: Can't mark entry {1}"
+msgstr "错误：不能标记节点 {1}"
+
+msgid "ERROR: status for entry_name {1} should be init, ready or finish"
+msgstr "错误：节点 {1} 的状态必须为初始，待启动或已完成"
+
+msgid "ERROR: status for entry_name {1} should be finish"
+msgstr "错误：节点 {1} 的状态必须为已完成"
+
+msgid "undo_id={1}"
+msgstr "undo_id={1}"
+
+msgid "ERROR: Can't kill process {1} on node {2}"
+msgstr "错误：不能停止节点 {2} 上的进程 {1}"
+
+msgid "ERROR: Can't drop {1}, {2}, retval={3}"
+msgstr "错误：不能删除 {1}， {2}， 返回值={3}"
+
+msgid "ERROR: Can't create table {1}, {2}"
+msgstr "错误：不能创建表 {1}， {2}"
+
+msgid "id={1}, key={2}"
+msgstr "id={1}, key={2}"
+
+msgid "begin_time={1}, end_time={2}, id={3}, key={4}"
+msgstr "begin_time={1}, end_time={2}, id={3}, key={4}"
+
+msgid "table_name={1}"
+msgstr "table_name={1}"
+
+msgid "ERROR: acall failed, op_name {1} - {2}"
+msgstr "错误：acall() 失败，操作名 {1} - {2}"
+
+msgid "ERROR: getrply failed, op_name {1} - {2}"
+msgstr "错误：getrply() 失败，操作名 {1} - {2}"
+
+msgid "partition_id={1}"
+msgstr "partition_id={1}"
+
+msgid "specify pages/-kibibytes of cache_size"
+msgstr "设置缓存页数或-KB字节数"
+
+msgid "set locking_mode=exclusive"
+msgstr "设置 locking_mode=exclusive"
+
+msgid "completed={1}"
+msgstr "completed={1}"
+
+msgid "stage={1}"
+msgstr "stage={1}"
+
+msgid "specify input XML configuration file, 1st positional parameter takes same effect."
+msgstr "指定输入XML配置文件，第一个位置参数起相同的作用。"
+
+msgid "ERROR: Can't execute command {1} on {2}"
+msgstr "错误：不能在 {2} 上执行命令 {1}"
+
+msgid "ERROR: Can't get remote pid"
+msgstr "错误：不能获取远程进程ID"
+
+msgid "ERROR: Failed to execute command {1} with return code {2}"
+msgstr "错误：执行命令 {1} 失败，返回值 {2}"
+
+msgid "ERROR: Can't fork process"
+msgstr "错误：不能创建进程"
+
+msgid "WARN: process {1} for entry {2} on {3} is stopped forcefully"
+msgstr "警告：{3} 上节点 {2} 的进程 {1} 被强制停止"
+
+msgid "do not remove stale files in output directories"
+msgstr "不删除输入目录下的过期文件"
+
+msgid "specify maximum parallel running processes"
+msgstr "设置最大并发运行的进程数"
+
+msgid "ERROR: Can't connect to {1}, {2}"
+msgstr "错误：不能连接到{1}, {2}"
+
+msgid "ERROR: Parse section entries failure, {1} ({2})"
+msgstr "错误：解析entries章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section entries failure, {1}"
+msgstr "错误：解析entries章节失败，{1}"
+
+msgid "ERROR: Parse section dependencies failure, {1} ({2})"
+msgstr "错误：解析dependencies章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section dependencies failure, {1}"
+msgstr "错误：解析dependencies章节失败"
+
+msgid "ERROR: workflow.conditions.condition.entry_name is empty"
+msgstr "错误：workflow.conditions.condition.entry_name 配置为空"
+
+msgid "ERROR: workflow.conditions.condition.related_name is empty"
+msgstr "错误：workflow.conditions.condition.related_name 配置为空"
+
+msgid "ERROR: Parse section conditions failure, {1} ({2})"
+msgstr "错误：解析conditions章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section conditions failure, {1}"
+msgstr "错误：解析conditions章节失败，{1}"
+
+msgid "ERROR: workflow.actions.action.entry_name is empty"
+msgstr "错误：workflow.actions.action.entry_name 配置为空"
+
+msgid "ERROR: workflow.actions.action.affected_name is empty"
+msgstr "错误：workflow.actions.action.affected_name 配置为空"
+
+msgid "ERROR: Parse section actions failure, {1} ({2})"
+msgstr "错误：解析actions章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section actions failure, {1}"
+msgstr "错误：解析actions章节失败，{1}"
+
+msgid "WARN: Waiting for entry {1} to finish"
+msgstr "警告：等待节点 {1} 变成结束"
+
+msgid "WARN: Waiting for entry {1} to init"
+msgstr "警告：等待节点 {1} 变成初始"
+
+msgid "ERROR: status of affected entry {1} should be FINISH"
+msgstr "错误：受影响的节点 {1} 的状态必须为结束"
+
+msgid "INFO:"
+msgstr "信息："
+
+msgid "WARN:"
+msgstr "警告："
+
+msgid "ERROR:"
+msgstr "错误："
+
+msgid "FATAL:"
+msgstr "致命："
+
+msgid "specify stage to generate"
+msgstr "指定需要生成的stage"
+
+msgid "ERROR: Can't find table with table id {1}"
+msgstr "错误：不能找到表ID {1} 相关的表"
+
+msgid "subject_id={1}"
+msgstr "subject_id={1}"
+
+msgid "busi_code={1}, subject_id={2}"
+msgstr "busi_code={1}, subject_id={2}"
+
+msgid "busi_code={1}"
+msgstr "busi_code={1}"
+
+msgid "ERROR: Can't open DBCPROFILE."
+msgstr "错误：不能打开 DBCPROFILE 文件。"
+
+msgid "ERROR: Can't find table {1}"
+msgstr "错误：不能找到表 {1}"
+
+msgid "ERROR: Can't find index {1} for table {2}"
+msgstr "错误：不能找到表 {2} 的索引 {1}"
+
+msgid "ERROR: table {1} is defined more times."
+msgstr "错误：表 {1} 被定义了多次。"
+
+msgid ""
+"ERROR: field_name {1} of table_id {2} is already defined in another table or "
+"source record."
+msgstr "错误：表 {2} 的字段 {1} 已经在别的表或输入记录中定义。"
+
+msgid ""
+"ERROR: field_name {1} of table_id {2} is already defined in another table."
+msgstr "错误：表 {2} 的字段 {1} 已经在别的表中定义。"
+
+msgid "ERROR: table {1} has value {2}, but missing key {3}"
+msgstr "错误：表 {1} 有值 {2}，但缺少关键字 {3}"
+
+msgid "ERROR: field_name {1} of table_id {2} is not defined yet."
+msgstr "错误：表 {2} 的字段 {1} 还没有定义。"
+
+msgid "ERROR: deal_type for busi_code {1} is not correct."
+msgstr "错误：指标 {1} 的 deal_type 不正确。"
+
+msgid "ERROR: complex_type for busi_code {1} is not correct."
+msgstr "错误：指标 {1} 的 complex_type 不正确。"
+
+msgid "ERROR: busi_code {1} is already defined in unical_datasource_cfg."
+msgstr "错误：指标 {1} 已经在 unical_datasource_cfg 表中定义。"
+
+msgid "ERROR: Unsupported field_type for busi_code {1}"
+msgstr "错误：对指标 {1} 不支持的字段类型"
+
+msgid ""
+"WARNING: busi_code {1} in ai_busi_comm_item_rel is missing in "
+"unical_datasource_cfg."
+msgstr "警告：在 ai_busi_comm_item_rel 表中的指标 {1} 在 unical_datasource_cfg 表中缺失。"
+
+msgid "ERROR: rel_type for busi_code {1} is not correct."
+msgstr "错误：指标 {1} 的 rel_type 不正确。"
+
+msgid "ERROR: all rel_type for busi_code {1} should be identical."
+msgstr "错误：指标 {1} 的所有 rel_type 必须一致。"
+
+msgid "ERROR: busi_code {1} is defined more times."
+msgstr "错误：指标 {1} 定义了多次。"
+
+msgid "busi_code={1}, ref_busi_code={2}"
+msgstr "busi_code={1}, ref_busi_code={2}"
+
+msgid "ERROR: deal_type for busi_code {1} is not supported."
+msgstr "错误：指标 {1} 的 deal_type 不支持。"
+
+msgid "ERROR: field_name {1} is not defined in input section, busi_code {2}"
+msgstr "错误：字段 {1} 没有在 input 章节定义，指标 {2}"
+
+msgid "ERROR: field_name {1} is not defined yet, busi_code {2}"
+msgstr "错误：字段 {1} 还没有定义，指标 {2}"
+
+msgid ""
+"ERROR: busi_code {1}, field_name {2} is conflict with busi_code {3} since "
+"they are from the same data source."
+msgstr "错误：指标 {1}，字段 {2} 与指标 {3} 冲突，因为他猛来自相同的数据源。"
+
+msgid "ERROR: busi_code {1}, subject_name {2} is not found in data source."
+msgstr "错误：指标 {1}，科目名 {2} 在数据源中找不到。"
+
+msgid "ERROR: Can't find table to get {1}"
+msgstr "错误：找不到表来获取 {1}"
+
+msgid ""
+"ERROR: Unsupported deal_type {1} for busi_code {2}, only DEAL_TYPE_DIRECT, "
+"DEAL_TYPE_COUNT, or DEAL_TYPE_SUM is allowed."
+msgstr "错误：对指标 {2} 不支持的 deal_type {1}，只有 DEAL_TYPE_DIRECT，DEAL_TYPE_COUNT，或 DEAL_TYPE_SUM 是允许的。"
+
+msgid "ERROR: Can't find busi table to get busi_code {1}"
+msgstr "错误：不能找到指标表来获取指标 {1}"
+
+msgid ""
+"ERROR: busi_code {1} is invalid since we can't find its source table {2} in "
+"shared memory definition."
+msgstr "错误：指标 {1} 非法，因为在共享内存定义中找不到它的源表 {2}。"
+
+msgid ""
+"WARNING: busi_code {1} is invalid since its related source table {2} is "
+"invalid."
+msgstr "警告：指标 {1} 非法，因为它的相关源表 {2} 非法。"
+
+msgid "ERROR: busi_code {1}, field_name {2} is not defined in table {3}"
+msgstr "错误：指标 {1}，字段 {2} 没有定义在表 {3}"
+
+msgid ""
+"ERROR: busi_code {1} is defined as DEAL_TYPE_SUM or DEAL_TYPE_COUNT, but its "
+"source table {2} doesn't have field_name subject_id."
+msgstr "错误：指标 {1} 定义为 DEAL_TYPE_SUM 或 DEAL_TYPE_COUNT，但其源表 {2}没有字段 subject_id。"
+
+msgid ""
+"ERROR: busi_code {1} is defined as DEAL_TYPE_ATTR, but its source table "
+"doesn't have field_name subject_id."
+msgstr "错误：指标 {1} 定义为 DEAL_TYPE_ATTR，但其源表没有字段 subject_id。"
+
+msgid "ERROR: Unsupported deal_type {1} for busi_code {2}"
+msgstr "错误：指标 {2} 的 deal_type {2} 不支持"
+
+msgid ""
+"busi_code={1}, src_busi_code={2}, ref_busi_code={3}, chnl_level={4}, "
+"is_mix_flag={5}"
+msgstr ""
+"busi_code={1}, src_busi_code={2}, ref_busi_code={3}, chnl_level={4}, "
+"is_mix_flag={5}"
+
+msgid ""
+"WARNING: busi_code {1} is not defined in unical_datasource_cfg/"
+"unical_rule_busi."
+msgstr "警告：指标 {1} 没有定义在 unical_datasource_cfg/unical_rule_busi 表。"
+
+msgid ""
+"WARNING: busi_code {1}, src_busi_code {2} is not defined in "
+"unical_datasource_cfg/unical_rule_busi."
+msgstr "警告：指标 {1}，源指标 {2} 没有定义在 unical_datasource_cfg/unical_rule_busi 表。"
+
+msgid ""
+"ERROR: busi_code {1} is complex busi, but is not channel level or account "
+"level."
+msgstr "错误：指标 {1} 是复合指标，但不是渠道级或账户级。"
+
+msgid "enlarge={1}"
+msgstr "enlarge={1}"
+
+msgid "ERROR: field_name {1} is defined as different field_type/field_size."
+msgstr "错误：字段 {1} 定义为不同的字段类型/字段长度。"
+
+msgid "busi_code={1}, rule_busi={2}, field_type={3}, local_flag={4}"
+msgstr "busi_code={1}, rule_busi={2}, field_type={3}, local_flag={4}"
+
+msgid ""
+"ERROR: busi_code should be followed after $ for busi_code {1}, rule_busi = "
+"[{2}]"
+msgstr "错误：对指标 {1}，rule_busi = [{2}] 指标必须跟在 $ 后面"
+
+msgid ""
+"ERROR: referenced busi_code {1} is not defined in unical_datasource_cfg."
+msgstr "错误：参考的指标 {1} 在 unical_datasource_cfg 表中未定义。"
+
+msgid "ERROR: invalid real_busi_code {1} for busi_code {2}"
+msgstr "错误：对指标 {2} 无效的真实指标 {1}"
+
+msgid "ERROR: referenced field_name {1} is not defined."
+msgstr "错误：参考的字段 {1} 未定义。"
+
+msgid ""
+"ERROR: busi_code {1} can't reference busi_code {2} defined in ai_rule_busi."
+msgstr "错误：指标 {1} 不能参考在 ai_rule_busi 中定义的指标 {2}"
+
+msgid "ERROR: Only #0 is allowed for busi_code {1}, rule_busi {2}"
+msgstr "错误：对指标 {1}，rule_busi {2} 只有 #0 是允许的"
+
+msgid "WARNING: Table {1} is removed since field_name {2} is not defined."
+msgstr "警告：由于字段 {2} 没有定义，表 {1} 被删除"
+
+msgid "mid_id={1}"
+msgstr "mid_id={1}"
+
+msgid "mod_id={1} expired, eff_date={1} is not in [{2}, {3})"
+msgstr "政策={1} 过期，生效日期={1} 不在 [{2}, {3}) 范围内"
+
+msgid "mod_id={1} is not in ai_mod_area, city_code={2}"
+msgstr "政策={1} 在 ai_mod_area 表中未定义，城市代码={2}"
+
+msgid "ERROR: Can't find mod_id {1}"
+msgstr "错误：找不到政策 {1}"
+
+msgid "ERROR: invalid value for busi_limit_month"
+msgstr "错误：对 busi_limit_month 无效的值"
+
+msgid ""
+"ERROR: mod_id {1} is defined in ai_mod_item_rule_relation, but missing in "
+"v_ai_mod_config/ai_mod_ext_info."
+msgstr "政策 {1} 在 ai_mod_item_rule_relation 表中定义，但在 v_ai_mod_config/ai_mod_ext_info 表中缺失。"
+
+msgid "mod_id={1}"
+msgstr "mod_id={1}"
+
+msgid ""
+"ERROR: mod_id {1} is defined in v_ai_mod_item_detail, but missing in "
+"v_ai_mod_config/ai_mod_ext_info."
+msgstr "政策 {1} 在 v_ai_mod_item_detail 表中定义，但在 v_ai_mod_config/ai_mod_ext_info 表中缺失。"
+
+msgid ""
+"ERROR: Can't find busi_code {1} in unical_datasource_cfg, mod_id={2}, "
+"comm_range_id={3}, comm_range_type={4}"
+msgstr "错误：在表 unical_datasource_cfg 中找不到指标 {1}，政策={2}，comm_range_id={3}, comm_range_type={4}"
+
+msgid "ERROR: Can't definition for field_name {1}, mod_id={2}, busi_code={3}"
+msgstr "错误：找不到字段 {1} 的定义，政策＝{2}，指标={3}"
+
+msgid ""
+"ERROR: It's too long for comm_range_value {1}, mod_id={2}, busi_code={3}, "
+"expect one character."
+msgstr "错误：comm_range_value的值 {1} 太长，政策＝{2}，指标={3}，期望一个字符。"
+
+msgid ""
+"ERROR: It's not an integer for comm_range_value {1}, mod_id={2}, busi_code="
+"{3}"
+msgstr "错误：comm_range_value的值 {1} 不是整形，政策＝{2}，指标={3}"
+
+msgid ""
+"ERROR: It's not a float for comm_range_value {1}, mod_id={2}, busi_code={3}"
+msgstr "错误：comm_range_value的值 {1} 不是浮点型，政策＝{2}，指标={3}"
+
+msgid ""
+"ERROR: It's too long for comm_range_value {1}, mod_id={2}, busi_code={3}, "
+"expect maximum {4}"
+msgstr "错误：错误：comm_range_value的值 {1} 太长，政策＝{2}，指标={3}，期望最长 {4}"
+
+msgid "str={1}"
+msgstr "str={1}"
+
+msgid "rule_id={1}"
+msgstr "rule_id={1}"
+
+msgid "city code={1}"
+msgstr "city code={1}"
+
+msgid "ERROR: expect one value for field_name {1}, gotten {2} value(s)."
+msgstr "错误：对字段 {1} 期望得到一个值，实际得到了 {2} 个值。"
+
+msgid ""
+"ERROR: Can't find rule_id {1}, please check configuration file to see if "
+"svc_key, tables, aliases, province_code, and driver_data are the same as "
+"step 1."
+msgstr "错误：找不到规则 {1}，请检查配置文件看看svc_key，tables，aliases，province_code 和 driver_data 是否与步骤1的相同。"
+
+msgid "ERROR: calc_start_time_unit for rule_id {1} is not correct."
+msgstr "错误：规则 {1} 的 calc_start_time_unit 不正确。"
+
+msgid "ERROR: cycle_time_unit for rule_id {1} is not correct."
+msgstr "错误：规则 {1} 的 cycle_time_unit 不正确。"
+
+msgid "ERROR: calc_method for rule_id {1} is not correct."
+msgstr "错误：规则 {1} 的 calc_method 不正确。"
+
+msgid "ERROR: rule_id {1} in ai_rule_detail is missing in ai_rule_config."
+msgstr "错误：在 ai_rule_detail 表中的规则 {1} 在 ai_rule_config 表中缺失。"
+
+msgid ""
+"ERROR: For rule_id {1} busi_code {2} in ai_rule_detail is missing in "
+"ai_busi_cfg/unical_datasource_cfg."
+msgstr "错误：对 ai_rule_detail 中的规则 {1}，指标 {2} 在 ai_busi_cfg/unical_datasource_cfg 表中缺失。"
+
+msgid "ERROR: driver_data must be 01 if rule_id={1}, calc_start_type=1."
+msgstr "错误：如果规则={1}，calc_start_type=1，驱动源必须为 01。"
+
+msgid "ERROR: busi_code {1} of rule_id {2} should have a numeric type."
+msgstr "错误：规则 {2} 的指标 {1} 必须是数字类型。"
+
+msgid "ERROR: busi_code {1} of rule_id {2} has no sub_busi_code {3}"
+msgstr "错误：规则 {2} 的指标 {1} 没有子指标 {3}"
+
+msgid "ERROR: calculation busi_code is missing for rule_id {1}"
+msgstr "错误：规则 {1} 的计算指标缺失"
+
+msgid ""
+"ERROR: calculation busi_code is missing or not from driver_data for rule_id "
+"{1}"
+msgstr "规则 {1} 的计算指标缺失或不是来源于驱动源"
+
+msgid ""
+"ERROR: rule_id {1} in ai_rule_cal_busi_detail is missing in ai_rule_config"
+msgstr "错误：ai_rule_cal_busi_detail 表中的规则 {1} 在 ai_rule_config 表中缺失"
+
+msgid "ERROR: rule_id {1} in ai_rule_payment_cfg is missing in ai_rule_config."
+msgstr "错误：ai_rule_payment_cfg 表中的规则 {1} 在 ai_rule_config 表中缺失。"
+
+msgid "ERROR: pay_type for rule_id {1} is not correct."
+msgstr "错误：规则 {1} 的 pay_type 不正确。"
+
+msgid "ERROR: pay_cycle_unit for rule_id {1} is not correct."
+msgstr "错误：规则 {1} 的 pay_cycle_unit 不正确。"
+
+msgid ""
+"ERROR: rule_id {1} in ai_rule_payment_cfg/ai_rule_payment_detail is missing "
+"in ai_rule_config."
+msgstr "错误：ai_rule_payment_cfg/ai_rule_payment_detail 表中的规则 {1} 在 ai_rule_config 表中缺失。"
+
+msgid "ERROR: pay_date for rule_id {1} is not correct."
+msgstr "错误：规则 {1} 的 pay_date 不正确。"
+
+msgid ""
+"ERROR: rule_id {1} in ai_rule_detail/ai_rule_detail_attr/"
+"ai_busi_datasource_attr is missing in ai_rule_config."
+msgstr "错误：ai_rule_detail/ai_rule_detail_attr/ai_busi_datasource_attr 表中的规则 {1} 在 ai_rule_config 表中缺失。"
+
+msgid "ERROR: busi_code {1} of rule_id {2} is missing in ai_busi_cfg."
+msgstr "错误：规则 {2} 的指标 {1} 在 ai_busi_cfg 表中缺失。"
+
+msgid "ERROR: parse attr_value failed, complex busi_code {1} of rule_id {2}"
+msgstr "错误：解析 attr_value 失败，规则 {2} 的复合指标 {1}"
+
+msgid "ERROR: For rule_id {1} failed, encountered unexcepted token '{2}'"
+msgstr "错误：对规则 {1} 解析失败，遇到不期望的词 '{2}'"
+
+msgid ""
+"ERROR: For rule_id {1} parse cond_str {2} failed, encountered unexcepted "
+"token '{3}'"
+msgstr "错误：对规则 {1} 解析 cond_str {2} 失败，遇到不期望的词 '{2}'"
+
+msgid ""
+"ERROR: For rule_id {1} parse cond_str {2} failed, keyword busi_code, opt or "
+"value is missing."
+msgstr "错误：对规则 {1} 解析 cond_str {2} 失败，关键字 busi_code，opt 或 value 缺失"
+
+msgid ""
+"ERROR: For rule_id {1} format for value {2} of cond_str {3} is not correct."
+msgstr "错误：对规则 {1} cond_str {3} 的值 {2} 的格式不正确。"
+
+msgid ""
+"ERROR: For rule_id {1} busi_code {2} of cond_str {3} is not defined in "
+"unical_datasource_cfg."
+msgstr "错误：对规则 {1} cond_str {3} 的指标 {2} 在 unical_datasource_cfg 表中未定义。"
+
+msgid "ERROR: For rule_id {1} busi_code {2} of cond_str {3} is not valid."
+msgstr "错误：对规则 {1} cond_str {3} 的指标 {2} 非法。"
+
+msgid ""
+"ERROR: For step rule_id {1} busi_code {2} of cond_str {3} should be equal to "
+"calculation busi_code {4}"
+msgstr "错误：对阶梯规则 {1} cond_str {3} 的指标 {2} 必须与计算指标 {4} 一致"
+
+msgid ""
+"ERROR: field_type {1} is not allowed for opt include/exclude, rule_id {2} "
+"busi_code {3} of cond_str {4}"
+msgstr "错误：对 opt 为包含/去除，字段类型 {1} 不允许，规则 {2} cond_str {4} 的指标 {3}"
+
+msgid ""
+"ERROR: field_type string can't be converted to float/double, rule_id {1} "
+"busi_code {2} of cond_str {3}"
+msgstr "错误：string的字段类型不能转换成 float/double，规则 {1} cond_str {3} 的指标 {2}"
+
+msgid ""
+"ERROR: For rule_id {1} parse cond_str {2} failed, duplicate keyword '{3}' is "
+"defined."
+msgstr "错误：对规则 {1} 解析 cond_str {2} 失败，定义了重复的关键字 '{3}'。"
+
+msgid "ERROR: For rule_id {1} parse calc_str {2} failed."
+msgstr "错误：对规则 {1} 解析 calc_str {2} 失败。"
+
+msgid ""
+"ERROR: For rule_id {1} parse calc_str {2} failed, encountered unexcepted "
+"token '{3}'"
+msgstr "错误：对规则 {1} 解析 calc_str {2} 失败，遇到不期望的词 '{3}'"
+
+msgid ""
+"ERROR: For rule_id {1} parse calc_str {2} failed, keyword month or value is "
+"missing."
+msgstr "错误：对规则 {1} 解析 calc_str {2} 失败，关键字 month 或 value 缺失。"
+
+msgid ""
+"ERROR: For rule_id {1} parse calc_str {2} failed, duplicate keyword {3} is "
+"defined."
+msgstr "错误：对规则 {1} 解析 calc_str {2} 失败，定义了重复的关键字 {3}。"
+
+msgid ""
+"ERROR: For rule_id {1} parse cond_str {2} failed, duplicate keyword {3} is "
+"defined."
+msgstr "错误：对规则 {1} 解析 cond_str {2} 失败，定义了重复的关键字 {3}。"
+
+msgid "attr_value={1}"
+msgstr "attr_value={1}"
+
+msgid "ERROR: parse attr_value {1} failed."
+msgstr "错误：解析 attr_value {1} 失败。"
+
+msgid "ERROR: parse attr_value {1} failed, encountered unexcepted token '{2}'"
+msgstr "错误：解析 attr_value {1} 失败，遇到不期望的词 '{2}'"
+
+msgid ""
+"ERROR: parse attr_value {1} failed, can't find token value and its content."
+msgstr "错误：解析 attr_value {1} 失败，找不到词 value 和它的内容。"
+
+msgid "ERROR: Failure to load CAL configuration"
+msgstr "错误：加载 CAL 配置失败"
+
+msgid "ERROR: Parse section cal failure, {1} ({2})"
+msgstr "错误：解析 cal 章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section cal failure, {1}"
+msgstr "错误：解析 cal 章节失败，{1}"
+
+msgid "ERROR: resource.collision_level invalid"
+msgstr "错误：resource.collision_level 配置无效"
+
+msgid "ERROR: resource.channel_level invalid"
+msgstr "错误：resource.channel_level 配置无效"
+
+msgid "ERROR: resource.cycle_type invalid"
+msgstr "错误：resource.cycle_type 配置无效"
+
+msgid "ERROR: Parse section tables failure, {1} ({2})"
+msgstr "错误：解析 tables 章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section tables failure, {1}"
+msgstr "错误：解析 tables 章节失败，{1}"
+
+msgid "ERROR: Parse section aliases failure, {1} ({2})"
+msgstr "错误：解析 aliases 章节失败，{1} ({2})"
+
+msgid "ERROR: Parse section aliases failure, {1}"
+msgstr "错误：解析 aliases 章节失败，{1}"
+
+msgid "ERROR: unsupported field_type {1} given."
+msgstr "错误：给定了不支持的字段类型 {1}。"
+
+msgid "ERROR: Can't get configuration, svc_key={1}, version={2}"
+msgstr "错误：不能获取配置，服务关键字={1}，版本={2}"
+
+msgid "ERROR: Can't find dst_dir in entry args.arg.name"
+msgstr "错误：在 args.arg.name 节点中找不到 dst_dir"
+
+msgid "ERROR: Can't find busi_dir in entry args.arg.name"
+msgstr "错误：在 args.arg.name 节点中找不到 busi_dir"
+
+msgid "ERROR: rule_id {1} for mod_id {2} is not defined in ai_rule_config."
+msgstr "错误：政策 {2} 的规则 {1} 在 ai_rule_config 表中未定义。"
+
+msgid "ERROR: rule_id {1} for mod_id {2} has some error."
+msgstr "错误：政策 {2} 的 规则 {1} 有错误。"
+
+msgid ""
+"ERROR: mix_busi_code {1} of rule_id {2} for mod_id {3} is out of cycle. "
+"exp_date={4}"
+msgstr "错误：政策 {3} 的规则 {2} 的混合指标 {1} 已经超出周期。失效时间={4}"
+
+msgid ""
+"ERROR: mix_busi_code {1} of rule_id {2} for mod_id {3} is not arrive "
+"calc_cycle. unit_multiple={4}, unit_remainder={5}"
+msgstr "错误：政策 {3} 的规则 {2} 的混合指标 {1} 还没有到达计算周期。unit_multiple={4}, unit_remainder={5}"
+
+msgid "ERROR: rule_id {1} is removed since no cal_para_value is defined."
+msgstr "错误：因为没有定义 cal_para_value，规则 {1} 被删除。"
+
+msgid ""
+"ERROR: rule_id {1} is removed since pay detail can be empty only for "
+"pay_type PAY_TYPE_ONCE."
+msgstr "错误：支付明细只有在支付类型为一次性支付时才允许为空，因此规则 {1} 被删除。"
+
+msgid "ERROR: mod_id {1} is removed since no rule is defined."
+msgstr "错误：因为没有定义规则，政策 {1} 被删除。"
+
+msgid "INFO: rule_id {1} for mod_id {2} is not defined, or defined wrongly."
+msgstr "信息：政策 {2} 的规则 {1} 没有定义，或定义有错误。"
+
+msgid "ERROR: rule_id {1} of mod_id {2} doesn't specify driver_data."
+msgstr "错误：政策 {2} 的规则 {1} 没有指定驱动源。"
+
+msgid "ERROR: rule_id {1} of mod_id {2} is removed since it's driver is 01."
+msgstr "错误：政策 {2} 的规则 {1} 被删除，因为它的驱动源为 01。"
+
+msgid ""
+"ERROR: rule_id {1} of mod_id {2} is removed since there are no accumulation "
+"busi_codes."
+msgstr "错误：政策 {2} 的规则 {1} 被删除，因为没有累积指标。"
+
+msgid ""
+"ERROR: busi_code {1} for rule_id {2} of mod_id {3} doesn't specify "
+"driver_data."
+msgstr "政策 {3} 的规则 {2} 的指标 {1} 没有指定驱动源。"
+
+msgid "ERROR: mod_id {1} is removed since its related rules has some error."
+msgstr "错误：政策 {1} 被删除，因为相关的规则有错误。"
+
+msgid "INFO: mod_id {1} is removed since no related rules exist."
+msgstr "信息：政策 {1} 被删除，因为没有相关的规则存在。"
+
+msgid "table_loaded={1}"
+msgstr "table_loaded={1}"
+
+msgid "WARNING: field_name {1} is not defined in dbc."
+msgstr "警告：字段 {1} 没有定义在 DBC。"
+
+msgid "ERROR: field_name {1} should be defined in input section."
+msgstr "错误：字段 {1} 应该在 input 章节定义。"
+
+msgid "ERROR: field_type for field_name {1} doesn't match."
+msgstr "错误：字段 {1} 的字段类型不匹配。"
+
+msgid "ERROR: field_name {1} should not be defined in input section."
+msgstr "错误：字段 {1} 不应该定义在 input 章节。"
+
+msgid "ERROR: Can't find field_name {1} in busi code map."
+msgstr "错误：字段 {1} 在指标映射中找不到。"
+
+msgid "track_stage={1}"
+msgstr "track_stage={1}"
+
+msgid "ERROR: expect one value at most for field_name {1}, gotten {2} values"
+msgstr "错误：字段 {1} 去往最多一个值，得到了 {2} 个值"
+
+msgid "ERROR: environment variable MIX_ACCT_CYCLE not set"
+msgstr "错误：环境变量 MIX_ACCT_CYCLE 未设置"
+
+msgid "ERROR: environment variable ACCT_CYCLE not set"
+msgstr "错误：环境变量 ACCT_CYCLE 未设置"
+
+msgid "policy_flag={1}, rule_flag={2}"
+msgstr "policy_flag={1}, rule_flag={2}"
+
+msgid "policy_flag={1}, rule_flag={2}, accu_flag={3}"
+msgstr "policy_flag={1}, rule_flag={2}, accu_flag={3}"
+
+msgid "INFO: rule_id {1} for mod_id {2} has no accumulation busi_code"
+msgstr "信息：政策 {2} 的规则 {1} 没有累积指标"
+
+msgid "ERROR: Can't open file {1} to write out busi data."
+msgstr "错误：不能打开文件 {1} 来写入指标数据。"
+
+msgid "ERROR: Can't open file {1} to write out busi history data."
+msgstr "错误：不能打开文件 {1} 来写入指标历史数据。"
+
+msgid "ERROR: Unknown field_type {1}"
+msgstr "错误：不认识的字段类型 {1}"
+
+msgid "ERROR: pay_chnl_id = {1}, taxpayer_type not found."
+msgstr "错误：支付渠道 = {1}, 找不到 taxpayer_type。"
+
+msgid "ERROR: default value for field {1} too long"
+msgstr "错误：字段 {1} 的默认值超长"
+
+msgid "ERROR: Failed to update table, please check primary key, insert exception: {1}"
+msgstr "错误：更新表失败，请检查主键，插入异常{1}"
+
+msgid "ERROR: Failed to update table, please check primary key"
+msgstr "错误：更新表失败，请检查主键"
+
+msgid "rule_id={1}, alias={2}, rule_busi={3}"
+msgstr ""
+
+msgid "ERROR: For rule_id {1} busi_code {2} cal_value {3}, can't add rule busi."
+msgstr "错误：对规则 {1} 指标 {2} 计算表达式 {3}， 不能增加规则指标。"
+
+msgid "do_report={1}"
+msgstr "do_report={1}"
+
+msgid "ERROR: stat.items.item.rollback invalid"
+msgstr "错误：stat.items.item.rollback 无效"

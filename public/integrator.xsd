@@ -1,0 +1,1834 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:element name="integrator">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="resource">
+					<xs:annotation>
+						<xs:documentation><![CDATA[
+通用参数定义。
+						]]></xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:group ref="resource"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="global" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation><![CDATA[
+全局定义。
+						]]></xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:group ref="global"/>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="adaptors">
+					<xs:annotation>
+						<xs:documentation><![CDATA[
+所有适配器定义。
+						]]></xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:group ref="adaptors"/>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:group name="resource">
+		<xs:all>
+			<xs:element name="integrator_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+唯一标识服务编排实例的ID，不同的服务编排实例要求该值不同。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dbname" default="ORACLE" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+记录运行过程中的处理日志的数据库名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="ORACLE"/>
+						<xs:enumeration value="ALTIBASE"/>
+						<xs:enumeration value="DBC"/>
+						<xs:enumeration value="GP"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="openinfo" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+连接数据库时的参数。其格式如下：
+[@](param_name=param_value) [; [@](param_name=param_value)]…
+如果在参数前加了@符，表示其值是加密的，需要预先通过sgpasswd命令加密；如果有特殊字符，可通过双引号或反斜杠转义。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="libs" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+服务编排实例在启动时动态加载的库文件列表，以空格分隔。通过该配置，可实现对服务组件的自动扩展。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sginfo" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+登录数据库时的参数。其格式如下：
+[@](param_name=param_value) [; [@](param_name=param_value)]…
+如果在参数前加了@符，表示其值是加密的，需要预先通过sgpasswd命令加密；如果有特殊字符，可通过双引号或反斜杠转义。
+允许的参数名称如下：
+username
+cltname
+passwd
+grpname
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dbcinfo" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+登录数据库时的参数。其格式如下：
+[@](param_name=param_value) [; [@](param_name=param_value)]…
+如果在参数前加了@符，表示其值是加密的，需要预先通过sgpasswd命令加密；如果有特殊字符，可通过双引号或反斜杠转义。
+允许的参数名称如下：
+username
+cltname
+passwd
+grpname
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="adaptors">
+		<xs:sequence>
+			<xs:element name="adaptor" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+单个适配器定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="resource">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+适配器通用参数定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="adaptor_resource"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="source" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+输入源参数定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="source"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="target" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+目标输出定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="target"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="invalid" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+无效输出定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="invalid"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="error" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+错误输出定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="error"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="input" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+输入定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="input"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="output" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+输出定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="output"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="summary" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+摘要定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="summary"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="distribute" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+分发定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="distribute"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="stat" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+统计入库定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="stat"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="args" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+组件参数列表定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="arg" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation><![CDATA[
+组件参数定义。
+											]]></xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:group ref="arg"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="adaptor_resource">
+		<xs:all>
+			<xs:element name="com_key">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+服务适配器注册时的组件名称，通过该名称可找到相应的服务适配器实例。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="svc_key">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+当前服务适配器的业务关键字，通过它获取相关的配置参数。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="version" default="-1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+配置文件版本号，-1表示最新版本。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="-1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="batch" default="1000" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+累计多少条记录后一次发送到服务端处理。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="concurrency" default="10" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+同时发送多少个请求到服务端处理，最大允许值为64。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+						<xs:maxInclusive value="64"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="disable_global" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+是否需要在客户端和服务端间传递全局变量。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="options" default="" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+空：输入格式自定义。
+FROM_INPUT：输入格式来源于上一步骤的输入。
+FROM_OUTPUT：输入格式来源于上一步骤的输出。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value=""/>
+						<xs:enumeration value="FROM_INPUT"/>
+						<xs:enumeration value="FROM_OUTPUT"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="exception_policy" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+异常发生时的处理策略（服务调用失败，如ServiceGalaxy异常、服务不可用等）。
+RETRY：继续尝试。
+DONE：当前处理的文件结束。
+EXIT：退出客户端进程。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="RETRY"/>
+						<xs:enumeration value="DONE"/>
+						<xs:enumeration value="EXIT"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="exception_wait" default="1000" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+异常发生时，等待多少毫秒继续操作。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="source">
+		<xs:all>
+			<xs:element name="class_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+输入处理类名。
+sa_ifixed：定长文本格式
+sa_ivariable：变长文本格式
+sa_ibinary：二进制文本格式
+sa_iasn1：ASN.1格式
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="sa_ifixed"/>
+						<xs:enumeration value="sa_ivariable"/>
+						<xs:enumeration value="sa_ibinary"/>
+						<xs:enumeration value="sa_iasn1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="per_records" default="1000" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+一个批次处理的记录数。超过该记录数，如果有需要，要进行断点保存。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="per_record" default="1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+多少个批次的处理后发送进度消息给前台。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="max_error_records" default="2147483648" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+一个文件中最大的错误记录数。超过该记录数，即被认为是文件级错误。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="args" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+每个类的实现都有特定的参数列表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="arg" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+每个类的实现都有特定的参数。
+文件流输入参数（sa_ifixed, sa_ivariable, sa_ibinary, sa_iasn1）：
+src_dir - 文件输入目录。
+dup_dir - 文件重复时存放的目录。
+bak_dir - 文件备份目录。
+tmp_dir - 文件处理过程中使用的临时目录。
+ftl_dir - 文件处理过程中使用的异常目录。
+local_dir - 文件处理过程中使用的本地目录。
+protocol - 支持的协议：
+	sftp:username@address
+	指定用户名和地址（IP或主机名）
+	sftp:address
+	地址（IP或主机名），使用与本地相同的用户名
+pattern - 文件匹配规则，正则表达式。
+bak_flag -
+	REMOVE：删除文件
+	SUFFIX：在原有文件上加后缀.bak
+	RENAME：挪到备份目录
+zip_cmd - 对输入文件进行压缩的命令行。
+sleep_time - 一批次文件处理后的休眠时间。
+exit_nofile - 当没有文件需要处理时，自动退出。
+	Y：退出
+	N：不退出
+	空：不退出
+deal_flag -
+	PARTIAL：断点方式提交
+	WHOLE：整个文件方式提交
+	CHECK：整个文件方式提交，并检查文件一致性规则。
+rule_check - 在deal_flag为CHECK模式下，用该规则判断当前文件的一致性。可使用的变量有：
+	1. 全局变量
+	2. 输出变量
+	如果返回0，表示通过文件检查，否则表示文件错误。
+
+文本文件输入参数（sa_ifixed, sa_ivariable, sa_ibinary）：
+record_flag - 以下各个选项的组合，以空格分隔
+	HEAD：有头记录。
+	TAIL：有尾记录。
+
+
+二进制文件输入参数（sa_ibinary）：
+rule_record_len - 记录长度规则：
+	$0：记录内容
+	#0：记录长度
+block_filler - 块填充符。
+
+变长文本文件输入参数（sa_ivariable）：
+escape - 输入记录转义符。
+
+ASN.1文件输入参数（sa_iasn1）：
+max_block_len - 一个块的最大字节数。
+file_root_tag - 文件根TAG。
+body_node_tag - 体节点TAG。
+block_data_tag - 块数据TAG。
+block_filler - 块填充符。
+skip_record_len - 记录跳过的字节数。
+options - 以下各个选项的组合，以空格分隔
+	BODY_ONE_CDR：体为一条记录。
+	BLOCK_ONE_CDR：块为一条记录。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="input_arg"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="input_arg">
+		<xs:all>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+参数名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="src_dir"/>
+						<xs:enumeration value="dup_dir"/>
+						<xs:enumeration value="bak_dir"/>
+						<xs:enumeration value="tmp_dir"/>
+						<xs:enumeration value="ftl_dir"/>
+						<xs:enumeration value="local_dir"/>
+						<xs:enumeration value="protocol"/>
+						<xs:enumeration value="pattern"/>
+						<xs:enumeration value="bak_flag"/>
+						<xs:enumeration value="zip_cmd"/>
+						<xs:enumeration value="sleep_time"/>
+						<xs:enumeration value="exit_nofile"/>
+						<xs:enumeration value="deal_flag"/>
+						<xs:enumeration value="rule_check"/>
+						<xs:enumeration value="record_flag"/>
+						<xs:enumeration value="rule_record_len"/>
+						<xs:enumeration value="escape"/>
+						<xs:enumeration value="max_block_len"/>
+						<xs:enumeration value="file_root_tag"/>
+						<xs:enumeration value="body_node_tag"/>
+						<xs:enumeration value="block_data_tag"/>
+						<xs:enumeration value="block_filler"/>
+						<xs:enumeration value="skip_record_len"/>
+						<xs:enumeration value="options"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="value">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+参数值。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="target">
+		<xs:all>
+			<xs:element name="class_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+目标输出处理类名。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="sa_output"/>
+						<xs:enumeration value="sa_osource"/>
+						<xs:enumeration value="sa_otarget"/>
+						<xs:enumeration value="sa_odbsource"/>
+						<xs:enumeration value="sa_odbtarget"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="args" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+每个类的实现都有特定的参数列表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="arg" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+每个类的实现都有特定的参数。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="output_arg"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="invalid">
+		<xs:all>
+			<xs:element name="class_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+目标输出处理类名。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="sa_output"/>
+						<xs:enumeration value="sa_osource"/>
+						<xs:enumeration value="sa_odbsource"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="args" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+每个类的实现都有特定的参数列表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="arg" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+每个类的实现都有特定的参数。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="output_arg"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="error">
+		<xs:all>
+			<xs:element name="class_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+目标输出处理类名。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="sa_output"/>
+						<xs:enumeration value="sa_osource"/>
+						<xs:enumeration value="sa_odbsource"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="args" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+每个类的实现都有特定的参数列表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="arg" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+每个类的实现都有特定的参数。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="output_arg"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="global">
+		<xs:all>
+			<xs:element name="fields">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+全局所有字段定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="field" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+全局字段定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="global_field"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="output_arg">
+		<xs:all>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+参数名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="directory"/>
+						<xs:enumeration value="rdirectory"/>
+						<xs:enumeration value="tables"/>
+						<xs:enumeration value="per_records"/>
+						<xs:enumeration value="per_report"/>
+						<xs:enumeration value="rollback"/>
+						<xs:enumeration value="rollback_script"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="value">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+参数值。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="global_field">
+		<xs:all>
+			<xs:element name="field_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="default_value" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段的默认值。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="field_size">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="readonly" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+如果该字段是只读的，则只从客户端传入服务端，服务端不会返回该全局变量。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="input">
+		<xs:sequence>
+			<xs:element name="table" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+输入定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="name">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+输入表名。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="record_type">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+记录类型：
+HEAD：当前格式为头记录格式。
+BODY：当前格式为体记录格式。
+TAIL：当前格式为尾记录格式。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="HEAD"/>
+									<xs:enumeration value="BODY"/>
+									<xs:enumeration value="TAIL"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="delimiter" default="0" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+变长格式下的字段分隔符对应的ASCII。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:integer">
+									<xs:minInclusive value="0"/>
+									<xs:maxInclusive value="255"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="rule_condition" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+匹配规则，返回0表示匹配上。可用的变量有：
+1. 全局变量
+2. $0 - 输入记录。
+								]]></xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="fields">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+输入字段列表。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="field" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation><![CDATA[
+输入字段。
+											]]></xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:group ref="input_field"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="input_field">
+		<xs:all>
+			<xs:element name="factor1">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+定长模式下为偏移量；变长模式下为最大允许长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="[0-9]*|0(x|X)[0-9a-fA-F]+"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="factor2" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+定长模式下为字段长度，变长模式下为最大保留长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="encode_type" default="ASCII" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+编码类型。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="ASCII"/>
+						<xs:enumeration value="INTEGER"/>
+						<xs:enumeration value="OCTETSTRING"/>
+						<xs:enumeration value="BCD"/>
+						<xs:enumeration value="TBCD"/>
+						<xs:enumeration value="ASN"/>
+						<xs:enumeration value="ADDRSTRING"/>
+						<xs:enumeration value="SEQUENCEOF"/>
+						<xs:enumeration value="REALBCD"/>
+						<xs:enumeration value="REALTBCD"/>
+						<xs:enumeration value="BCDD"/>
+						<xs:enumeration value="UNINTEGER"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="parent_serial" default="-1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+父节点序列号。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="field_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="output">
+		<xs:sequence>
+			<xs:element name="table" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+输入定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:all>
+						<xs:element name="name">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+输入表名。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="fields">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+			输出字段列表。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="field" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation><![CDATA[
+			输出字段。
+											]]></xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:group ref="output_field"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:all>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="output_field">
+		<xs:all>
+			<xs:element name="field_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_size">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="summary">
+		<xs:all>
+			<xs:element name="class_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+摘要输出处理类名。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="sa_output"/>
+						<xs:enumeration value="sa_osummary"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="items">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+摘要输出定义列表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="item" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+摘要输出定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="summary_item"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="summary_item">
+		<xs:all>
+			<xs:element name="item">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+摘要输出定义列表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="table_name">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+摘要输出表名。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="rollback" default="DELETE" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+回退方式：
+NONE：不需操作。
+TRUNCATE：清空表。
+DELETE：删除表。
+SCRIPT：执行脚本。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="NONE"/>
+									<xs:enumeration value="TRUNCATE"/>
+									<xs:enumeration value="DELETE"/>
+									<xs:enumeration value="SCRIPT"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="rollback_script" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+回退方式：
+NONE：不需操作。
+TRUNCATE：清空表。
+DELETE：删除表。
+SCRIPT：执行脚本。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="key" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+摘要输出主键定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="summary_key"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="value" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+摘要输出值定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="summary_value"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="summary_key">
+		<xs:all>
+			<xs:element name="from_global" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段是否来自全局变量。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+来源的字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_type">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+INT：整型
+LONG：长整型
+FLOAT：浮点型
+DOUBLE：双精度浮点型
+STRING：字符串型
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="INT"/>
+						<xs:enumeration value="LONG"/>
+						<xs:enumeration value="FLOAT"/>
+						<xs:enumeration value="DOUBLE"/>
+						<xs:enumeration value="STRING"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_size">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="summary_value">
+		<xs:all>
+			<xs:element name="from_global" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段是否来自全局变量。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+来源的字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_type">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+INT：整型
+LONG：长整型
+FLOAT：浮点型
+DOUBLE：双精度浮点型
+STRING：字符串型
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="INT"/>
+						<xs:enumeration value="LONG"/>
+						<xs:enumeration value="FLOAT"/>
+						<xs:enumeration value="DOUBLE"/>
+						<xs:enumeration value="STRING"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_size">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="action" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+ASSIGN：赋值
+MIN：取最小值
+MAX：取最大值
+ADD：累加
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="ASSIGN"/>
+						<xs:enumeration value="MIN"/>
+						<xs:enumeration value="MAX"/>
+						<xs:enumeration value="ADD"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="distribute">
+		<xs:all>
+			<xs:element name="class_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+分发输出处理类名。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="sa_output"/>
+						<xs:enumeration value="sa_ostream"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="max_open_files" default="1000" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+单个SA节点分发时最大允许打开的文件数。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="items">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+分发项目定义列表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="item" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+分发项目定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="distribute_item"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="distribute_item">
+		<xs:all>
+			<xs:element name="rule_condition" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+匹配规则，返回0表示匹配上。可用的变量有：
+1. 全局变量
+2. $i - 输出变量
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rule_file_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+分发输出的文件名规则，可用的变量有：
+1. 全局变量
+2. $i - 输出变量
+3. #0 - 输出文件名
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="dst_dir">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+分发输出目录。可定义环境变量，如${dst_dir}。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="rdst_dir" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+分发输出远程目录。可定义环境变量，如${rdst_dir}。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="pattern" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+回退时使用的正则表达式。可定义环境变量。默认为^.*\\.${SVC_KEY}$
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="options" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+INTERNAL：内部格式。
+SAME_FILE：允许不同格式写入同一文件。
+SPLIT：一条记录根据某个字段分成多条记录输出。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:list>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="INTERNAL"/>
+								<xs:enumeration value="SAME_FILE"/>
+								<xs:enumeration value="SPLIT"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:list>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="head" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+头记录格式定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="distribute_record"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="body" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+体记录格式定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="distribute_record"/>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="tail" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+尾记录格式定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:group ref="distribute_record"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="distribute_record">
+		<xs:all>
+			<xs:element name="delimiter" default="0" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+记录间分隔符对应的ASCII
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+						<xs:maxInclusive value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="options" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+RETURN：每行记录有回车。
+FIXED：定长输出。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:list>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="RETURN"/>
+								<xs:enumeration value="FIXED"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:list>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fields">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+分发字段列表定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="field" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+分发字段定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="distribute_field"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="distribute_field">
+		<xs:all>
+			<xs:element name="from_global" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段是否来自全局变量。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+来源的字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_type" default="STRING" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+INT：整型
+LONG：长整型
+FLOAT：浮点型
+DOUBLE：双精度浮点型
+STRING：字符串型
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="INT"/>
+						<xs:enumeration value="LONG"/>
+						<xs:enumeration value="FLOAT"/>
+						<xs:enumeration value="DOUBLE"/>
+						<xs:enumeration value="STRING"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="align_mode" default="INTERNAL" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+LEFT：左对齐方式
+INTERNAL：内部对齐方式
+RIGHT：右对齐方式
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="LEFT"/>
+						<xs:enumeration value="INTERNAL"/>
+						<xs:enumeration value="RIGHT"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_size" default="0" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fill" default=" " minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+填充符。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:length value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="precision" default="0" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+小数点后保留N位。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="0"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="action" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+空：无动作
+ADD_INT：整型累加
+ADD_LONG：长整型累加
+ADD_FLOAT：浮点累加
+ADD_DOUBLE：双精度浮点累加
+INC_INT：整型自增
+MIN_INT：整型取最小
+MIN_LONG：长整型取最小
+MIN_FLOAT：浮点取最小
+MIN_DOUBLE：双精度浮点取最小
+MIN_STR：字符串取最小
+MAX_INT：整型取最大
+MAX_LONG：长整型取最大
+MAX_FLOAT：浮点取最大
+MAX_DOUBLE：双精度浮点取最大
+MAX_STR：字符串取最大
+SPLIT_FIELD：拆单数组，例如3000, 1000,100….，会拆分为多条话单，此字段按“,”分隔输出多条记录。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="ADD_INT"/>
+						<xs:enumeration value="ADD_LONG"/>
+						<xs:enumeration value="ADD_FLOAT"/>
+						<xs:enumeration value="ADD_DOUBLE"/>
+						<xs:enumeration value="INC_INT"/>
+						<xs:enumeration value="MIN_INT"/>
+						<xs:enumeration value="MIN_LONG"/>
+						<xs:enumeration value="MIN_FLOAT"/>
+						<xs:enumeration value="MIN_DOUBLE"/>
+						<xs:enumeration value="MIN_STR"/>
+						<xs:enumeration value="MAX_INT"/>
+						<xs:enumeration value="MAX_LONG"/>
+						<xs:enumeration value="MAX_FLOAT"/>
+						<xs:enumeration value="MAX_DOUBLE"/>
+						<xs:enumeration value="MAX_STR"/>
+						<xs:enumeration value="SPLIT_FIELD"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="stat">
+		<xs:all>
+			<xs:element name="class_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+统计入库处理类名。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="sa_output"/>
+						<xs:enumeration value="sa_ostat"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="items">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+分发项目定义列表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="item" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+分发项目定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="stat_item"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="stat_item">
+		<xs:all>
+			<xs:element name="options">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+统计入库选项：
+INSERT：插入
+UPDATE：更新
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:list>
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="INSERT"/>
+								<xs:enumeration value="UPDATE"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:list>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="rule_condition" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+匹配规则，返回0表示匹配上。可用的变量有：
+1. 全局变量
+2. $i - 输出变量
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rule_table_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+分发输出的文件名规则，可用的变量有：
+1. 全局变量
+2. $i - 输出变量
+3. #0 - 输出表名
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fields">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+统计入库所有字段定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="field" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+统计入库字段定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="stat_field"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="stat_field">
+		<xs:all>
+			<xs:element name="from_global" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段是否来自全局变量。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="field_name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+来源的字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="element_name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+表中的字段名称，默认为来源字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="operation" default="=" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+在条件语句中的比较操作符。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="insert_desc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+插入字段描述。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="update_desc" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+更新字段描述。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="is_key" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+是否为关键字字段。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="arg">
+		<xs:all>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+参数名称。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="rule_dup"/>
+						<xs:enumeration value="tables"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="value">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+参数值。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+</xs:schema>

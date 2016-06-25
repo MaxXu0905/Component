@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:element name="services">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="service" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation><![CDATA[
+单个Service Adaptor定义。
+						]]></xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:all>
+							<xs:element name="resource">
+								<xs:annotation>
+									<xs:documentation><![CDATA[
+通用参数配置。
+									]]></xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:group ref="resource"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="global" minOccurs="0">
+								<xs:annotation>
+									<xs:documentation><![CDATA[
+全局参数配置。
+									]]></xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:group ref="global"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="input">
+								<xs:annotation>
+									<xs:documentation><![CDATA[
+输入参数配置。
+									]]></xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:group ref="input"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="output">
+								<xs:annotation>
+									<xs:documentation><![CDATA[
+输出参数配置。
+									]]></xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:group ref="output"/>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="processes">
+								<xs:annotation>
+									<xs:documentation><![CDATA[
+处理规则配置。
+									]]></xs:documentation>
+								</xs:annotation>
+								<xs:complexType>
+									<xs:group ref="processes"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:all>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:group name="resource">
+		<xs:all>
+			<xs:element name="svc_key" type="xs:string" nillable="false">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+当前服务的业务关键字，通过它获取相关的配置参数。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="version" default="-1" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+配置文件版本号，-1表示最新版本。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="-1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="disable_global" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+是否需要在客户端和服务端间传递全局变量。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="global">
+		<xs:all>
+			<xs:element name="fields">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+所有全局字段定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="field" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+全局字段定义。
+									]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:group ref="global_field"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="global_field">
+		<xs:all>
+			<xs:element name="field_name" type="xs:string" nillable="false">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="field_size">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="readonly" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+如果该字段是只读的，则只从客户端传入服务端，服务端不会返回该全局变量。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="input">
+		<xs:sequence>
+			<xs:element name="table" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+输入表定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+输入表名称。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="fields">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+所有输入字段定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="field" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation><![CDATA[
+输入字段定义。
+											]]></xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:group ref="input_field"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="input_field">
+		<xs:all>
+			<xs:element name="field_name" type="xs:string" nillable="false">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="field_size">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="output">
+		<xs:sequence>
+			<xs:element name="table" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+输入表定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="name">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+			输入表名称。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="fields">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+			所有输出字段定义。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="field" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation><![CDATA[
+			输出字段定义。
+											]]></xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:group ref="output_field"/>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+	<xs:group name="output_field">
+		<xs:all>
+			<xs:element name="field_name" type="xs:string" nillable="false">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段名称。
+					]]></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="field_size">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+字段长度。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+	<xs:group name="processes">
+		<xs:annotation>
+			<xs:documentation><![CDATA[
+所有转换定义。
+			]]></xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="process" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+单个转换定义。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="rule" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation><![CDATA[
+单个规则。
+								]]></xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="0"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:group>
+</xs:schema>

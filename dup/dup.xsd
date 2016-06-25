@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="qualified">
+	<xs:element name="resource">
+		<xs:annotation>
+			<xs:documentation><![CDATA[
+查重参数配置。
+			]]></xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:group ref="resource"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:group name="resource">
+		<xs:all>
+			<xs:element name="database">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+数据库名。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="enable_cross" default="N" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+是否支持交叉查重。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="partitions">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+单节点上查重服务的分区数。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:integer">
+						<xs:minInclusive value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="hostid">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+需要启动查重服务的节点列表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="auto_create" default="Y" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation><![CDATA[
+如果相应的表不存在，是否允许自动创建表。
+					]]></xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="Y"/>
+						<xs:enumeration value="N"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:group>
+</xs:schema>
